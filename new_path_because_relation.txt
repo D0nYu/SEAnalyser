@@ -1,0 +1,329 @@
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"lock"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rename"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"setattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"write"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"create"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"ioctl"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"read"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"open"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rmdir"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"search"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"reparent"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"remove_name"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"add_name"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_modules"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_timer"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_iomem"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_stat"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"proc_stat"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"proc_stat"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"append"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"lock"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"unlink"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"map"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"rename"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"ioctl"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"write"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"create"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"setattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_interrupts"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"ioctl"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"write"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"create"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"setattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"lock"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"append"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"map"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"unlink"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"rename"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"debugfs_tracing"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"write"}]->(m{name:"debugfs_tracing"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_zoneinfo"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"unix_stream_socket",permission:"connectto"}]->(m{name:"system_server"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"map"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"execute"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"lock"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"ioctl"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"sysfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rmdir"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"open"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"reparent"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"search"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"setattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"create"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"write"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"remove_name"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"add_name"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rename"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"lock"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"read"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"ioctl"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"mnt_media_rw_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"ioctl"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"read"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"lock"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"search"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"open"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"getattr"}]->(m{name:"zygote_exec"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"read"}]->(m{name:"zygote_exec"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"fd",permission:"use"}]->(m{name:"sdcardd"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"system",permission:"module_request"}]->(m{name:"kernel"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"open"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"map"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"lock"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"getattr"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"read"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"ioctl"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"map"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"lock"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"ioctl"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"sysfs_zram"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"execute"}]->(m{name:"vendor_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"filesystem",permission:"getattr"}]->(m{name:"system_data_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"mnt_media_rw_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_interrupts"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_timer"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_stat"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"unlink"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"map"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"rename"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"ioctl"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"write"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"create"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"setattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"lock"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"append"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_zoneinfo"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"execute"}]->(m{name:"system_data_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"debugfs_tracing"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"write"}]->(m{name:"debugfs_tracing"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"lnk_file",permission:"read"}]->(m{name:"zygote_exec"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"lock"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rename"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"setattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"write"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"create"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"ioctl"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"read"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rmdir"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"open"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"reparent"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"search"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"add_name"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"remove_name"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_iomem"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"radio_data_file"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"proc_modules"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rmdir"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"open"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"reparent"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"search"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"add_name"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"remove_name"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"rename"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"lock"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"setattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"getattr"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"create"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"write"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"read"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"dir",permission:"ioctl"}]->(m{name:"sdcardfs"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"lock"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"append"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"map"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"unlink"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"write"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"create"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"getattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"fd",permission:"use"}]->(m{name:"hwservicemanager"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"ioctl"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"read"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"open"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"rename"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"file",permission:"setattr"}]->(m{name:"fuse"}) return p
+Union
+match p = (n:user_domain)-[r:allow{class:"service_manager",permission:"find"}]->(m{name:"surfaceflinger_service"}) return p

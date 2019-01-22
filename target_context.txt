@@ -1,0 +1,7 @@
+set([u'hwouc_prop', u'theme_data_file', u'sdcardd', u'jpegdec', u'surfaceflinger_service', u'hwservicehost_service', u'kernel', u'gpu_skipswap_property', u'cust_data_file', u'uniperf', u'proc_modules', u'sysfs_gpu', u'logserver', u'logcat_device', u'powerlogd', u'powerlogdw_socket', u'hisi_jpu', u'proc_interrupts', u'cust_file', u'untrusted_app_devpts', u'gpuassistant', u'displayeffect', u'exception_device', u'proc_zoneinfo', u'sysfs', u'sdcardfs', u'bcc_exec', u'proc_stat', u'zygote_exec', u'mnt_media_rw_file', u'vr_device', u'hwservicemanager', u'data_system_hiview', u'hal_neuralnetworks_server', u'system_data_file', u'hwhfd_public_sysfs', u'gpuassistant_service', u'perfgenius', u'lzftmp', u'fuse', u'hivrarserver', u'hwservicehost', u'debugfs_tracing', u'proc_timer', u'radio_data_file', u'ctrl_socket_file', u'sysfs_zram', u'thememanager_deep_prop', u'hwhfd_sysfs', u'proc_cpus_readable', u'proc_iomem', u'cifs_t', u'untrusted_app_25_devpts', u'untrusted_app_visible_hisi_hwservice', u'system_server', u'hiaiserver', u'mediacommservice', u'hivrar', u'vfat', u'data_file_type', u'input_method_secure_service', u'app_acc_file', u'vendor_file'])
+
+ana:
+hwouc_prop : read by all apps(appdomain)
+theme_data_file : read by appdomain , writen by priv_app/domains 
+sdcardd: fd use by appdomain
+

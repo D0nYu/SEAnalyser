@@ -1,0 +1,20 @@
+seversion >= 28.0
+/Users/Don/Desktop/Learning_Exercise/SEAndroid/Pixel/system_etc_selinux/selinux/plat_sepolicy.cil /Users/Don/Desktop/Learning_Exercise/SEAndroid/Pixel/vendor_etc_selinux/selinux/vendor_sepolicy.cil /Users/Don/Desktop/Learning_Exercise/SEAndroid/Pixel/system_etc_selinux/selinux/mapping/28.0.cil
+In file [plat_sepolicy.cil]
+allow_rules: 6044
+In file [vendor_sepolicy.cil]
+allow_rules: 1598
+In file [28.0.cil]
+No neverallow rules in this file
+allow_rules: 0
+No typetransition in this file
+In file [plat_pub_versioned.cil]
+allow_rules: 3518
+No typetransition in this file
+finegrained neverallow:5780653
+{'_type': 'proc_stat', 'claz': 'file', 'perm': 'read'}
+{'_type': 'proc_stat', 'claz': 'file', 'perm': 'read'}
+======== Allow list:16 ====
+[('dumpstate','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('init','proc_stat','file',['read', 'setattr', 'open']), ('init','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('perfprofd','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('shell','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('vendor_init','proc_stat','file',['read', 'setattr', 'open']), ('incidentd','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('system_server','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('irqbalance','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('thermal-engine','proc_stat','file',['read', 'getattr', 'open']), ('dumpstate','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('init','proc_stat','file',['read', 'setattr', 'open']), ('init','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('perfprofd','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('shell','proc_stat','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('vendor_init','proc_stat','file',['read', 'setattr', 'open'])]
+======== Neverallow list:10 ====
+[('untrusted_app_27','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('untrusted_app_25','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('untrusted_app','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('ephemeral_app','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('isolated_app','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('mediaprovider','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('untrusted_app','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('untrusted_app_27','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('untrusted_app_25','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']), ('untrusted_v2_app','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open'])]

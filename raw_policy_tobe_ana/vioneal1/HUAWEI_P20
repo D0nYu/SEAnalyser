@@ -1,0 +1,6 @@
+(('init', 'base_typeattr_145', 'chr_file', ['setattr']), ('domain','exec_type','chr_file',['write', 'create', 'setattr', 'relabelfrom', 'append', 'unlink', 'link', 'rename']))
+(('installd', 'cgroup', 'file', ['ioctl', 'read', 'write', 'create', 'getattr', 'setattr', 'lock', 'append', 'map', 'unlink', 'rename', 'open']), ('domain','cgroup','file',['create']))
+(('base_typeattr_182', 'proc_net', 'file', ['ioctl', 'read', 'getattr', 'lock', 'map', 'open']), ('ephemeral_app','proc_net','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'open']))
+(('init', 'sysfs_type', 'file', ['ioctl', 'read', 'write', 'getattr', 'lock', 'append', 'map', 'open']), ('init','sysfs','file',['read', 'write', 'open']))
+(('untrusted_app_25', 'proc_stat', 'file', ['read']), ('untrusted_app_all','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']))
+(('untrusted_app_25', 'proc_stat', 'file', ['open']), ('untrusted_app_all','proc_stat','file',['ioctl', 'read', 'write', 'create', 'setattr', 'lock', 'relabelfrom', 'append', 'unlink', 'link', 'rename', 'execute', 'execute_no_trans', 'open']))
