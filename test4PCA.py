@@ -5,7 +5,7 @@ import numpy as np
 #[0:domain,1:mlstrustedsubject,2:coredomain,3:appdomain,4:untrusted_app_all,5:netdomain,
 #6:bluetoothdomain,7:binderservicedomain,8:halserverdomain,9:halclientdomain,10:update_engine_common]
 
-def pcatest(n_components):
+def pca_helper(X,n_components):
 	X = np.array([[1,1,1,0,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0,0,0,0],\
 				[1,0,1,0,0,0,0,0,0,0,0],[1,1,1,0,0,1,0,0,0,1,0],\
 				[1,1,1,1,0,1,0,0,0,0,0],[1,0,1,1,0,0,0,0,0,0,0],\

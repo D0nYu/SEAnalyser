@@ -44,7 +44,7 @@ def get_target_finegrained_rules(devins,**kw):
 	condition = True
 	for r in devins.finegrained_allow_list:
 		if "domain" in kw:
-			condition1 = r.domain == kw["domain"]
+			condition1 = ((r.domain == kw["domain"]) and (r.domain !="su")) #exclude su type
 		else:
 			condition1 = True
 		if "_type" in kw:

@@ -7,6 +7,7 @@ import numpy as np
 import cilparser
 from cilclass import *
 from rules_statistic import *
+import sys
 
 
 outputdir = "/Users/Don/Desktop/Learning_Exercise/SEAndroid/SEanalyser/raw_policy_tobe_ana/"
@@ -166,7 +167,7 @@ def get_related_rules(fr,ref_ins):
 	return (list(set(allow_sub)),list(set(allow_obj)),list(set(neverallow_sub)),list(set(neverallow_obj)))
 
 def check_raw_policy():
-	ref_ins = dev(ref_dev,expanded_neal = True)
+	ref_ins = dev(ref_dev,expanded_neal = False)
 
 	for d in oem_dev_list:
 		#oem_ins = dev(d, expanded_neal= True)
@@ -186,38 +187,64 @@ def check_raw_policy():
 					fine_rules_set = eval(repr(raw_rule_dict[src_rule]))
 					for fr in fine_rules_set:
 						print "target_rule:",fr
+						exit()
 						related_rules = get_related_rules(eval(fr),ref_ins)#a tuple of list()
-						#print "allow_sub:%d\n"%len(related_rules[0]),related_rules[0]
-						#print "allow_obj:%d\n"%len(related_rules[1]),related_rules[1]
-						#print "neverallow_sub:%d\n"%len(related_rules[2]),related_rules[2]
-						#print "neverallow_obj:%d\n"%len(related_rules[3]),related_rules[3]
 						subs = get_subs(related_rules)
 						trainset_features = []
-						for sub in subs :
-							print sub
-							features = get_feature(ref_ins,sub)
-							print features
-							trainset_features.append(features)
-						X = np.array(trainset_features)
+						print "Allow Subs:",len(subs[0])
+						for allowsub in subs[0] :
+							features = sub_feature(ref_ins,allowsub)
+							if features.typetransition_path == []:
+								print "[illegal]",allowsub
+							del(features)
 
-					if count >=3:
+						print "Neverallow Subs"
+						for neverallowsub in subs[1] :
+							features = sub_feature(ref_ins,allowsub)
+							if features.typetransition_path == []:
+								print "[illegal]",neverallowsub
+							else:
+								print "legal:",features.typetransition_path
+							del(features)
+				
+						'''
+						X = np.array(trainset_features)
+						if len(features)>= len(subs):
+							print "Sample not enough.(features:%d;subs:%d)"%(len(features),len(subs))
+							#pca_helper(X) 
+						else:
+							#print len(trainset_features),len(subs)
+							pca_helper(X) #use MLE to guess the dimension
+						'''
+
+					if count >=50:
 						exit()
 
-def get_subs(related_rules):
-	related_types = []
-	for i in related_rules[0]:
-		related_types.append(i.domain)
-	for j in related_rules[2]:
-		related_types.append(i.domain)
+def pca_helper(X):
 
-	return related_types
+	pca = PCA(n_components = 'mle')
+	print pca.fit_transform(X)
+	print "pca ratio:"
+	print pca.explained_variance_ratio_
+
+
+
+def get_subs(related_rules):
+	related_allow_types = []
+	related_neverallow_types = []
+	for i in related_rules[0]:
+		related_allow_types.append(i.domain)
+	for j in related_rules[2]:
+		related_neverallow_types.append(j.domain)
+
+	return list(set(related_allow_types)),list(set(related_neverallow_types))
 
 def get_feature(ref_dev,typename):
 	#feature_list:
 	#[0:domain,1:mlstrustedsubject,2:coredomain,3:appdomain,4:untrusted_app_all,5:netdomain,
 	#6:bluetoothdomain,7:binderservicedomain,8:halserverdomain,9:halclientdomain]
 
-	feature_list = [-1]*10
+	feature_list = [0]*10
 	feature_domain_lookuplist = ["domain","mlstrustedsubject","coredomain","appdomain","untrusted_app_all",\
 								"netdomain","bluetoothdomain","binderservicedomain","halserverdomain","halclientdomain"]
 
