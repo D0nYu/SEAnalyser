@@ -9,18 +9,9 @@ import os
 import sys
 import re
 from main import gen_attribute_dic
+from global_configs import *
 
-#--Global configuration----
-#local macos:
-work_path = "/Users/Don/Desktop/Learning_Exercise/SEAndroid/"
-#
 
-sys_cil_file = "system_etc_selinux/selinux/plat_sepolicy.cil"
-ven_cil_file = "vendor_etc_selinux/selinux/nonplat_sepolicy.cil"#OEM file path
-np_cil_file = "vendor_etc_selinux/selinux/vendor_sepolicy.cil"#Pixel file path
-seinfo_path = "vendor_etc_selinux/selinux/seinfo_all"
-
-#------
 def printlogo(str):
 	print "*"*40
 	print "%20s"%str

@@ -1,17 +1,16 @@
 import cilparser
 import os
+import runtime_collector
+from global_configs import *
 
-work_path = "/Users/Don/Desktop/Learning_Exercise/SEAndroid/"
-sys_cil_file = "system_etc_selinux/selinux/plat_sepolicy.cil"
-ven_cil_file = "vendor_etc_selinux/selinux/vendor_sepolicy.cil"#seversion >= 28
-ven_seapp_file = "vendor_etc_selinux/selinux/vendor_seapp_contexts"
-np_cil_file = "vendor_etc_selinux/selinux/nonplat_sepolicy.cil"#seversion < 28
-np_seapp_file = "vendor_etc_selinux/selinux/nonplat_seapp_contexts"
-mapping_dir = "system_etc_selinux/selinux/mapping"
-sysver_cil_file = "vendor_etc_selinux/selinux/plat_pub_versioned.cil"
-version_file ="vendor_etc_selinux/selinux/plat_sepolicy_vers.txt"
-sys_seapp_file = "system_etc_selinux/selinux/plat_seapp_contexts"
 
+userlevel_dict = {"cameraserver":1047,"mdnsr":1020,"_isolated":90000,\
+				"bluetooth":1002,"logd":1036,"radio":1001,"mediaex":1040,"keystore":1017,\
+				"media":1013,"system":1000,"webview_zygote":1053,"_app":10000,\
+				"audioserver":1041,"gps":1021,"statsd":1066,"shell":2000,"nobody":9999,\
+				"graphics":1003,"tombstoned":1058,"vpn":1016,"secure_element":1068,"incidentd":1067,\
+				"nfc":1027,"wifi":1010,"drm":1019,"shared_relro":1037,\
+				"mediacodec":1046,"root":0}
 
 class dev(object):
 	"""docstring for dev"""
@@ -155,9 +154,26 @@ class dev(object):
 			else:
 				self.typetrans_dict[typetrans[0]].append((typetrans[1],typetrans[3]))
 
-
-
 	def expand_typetrans(self,typetrans_list,attr_dict):
+		#BUGS here, not exclude _28_0
+		ret_list = []
+		for entry in typetrans_list:
+			subset = cilparser.recursively_expand_attr(entry[0],attr_dict)
+			objset = cilparser.recursively_expand_attr(entry[1],attr_dict)
+			targetset = cilparser.recursively_expand_attr(entry[3],attr_dict)
+			
+			for sub in subset:
+				for obj in objset:
+					for tar in targetset:
+						ret_list.append((sub,obj,entry[2],tar))
+		return ret_list
+
+	'''
+	def expand_typetrans(self,typetrans_list,attr_dict):
+		#BUGS here, not exclude _28_0
+		print typetrans_list[1]
+		print attr_dict["update_engine_28_0"]
+		exit()
 		ret_list = []
 		for entry in typetrans_list:
 			sublist = []
@@ -188,7 +204,7 @@ class dev(object):
 						ret_list.append((sub,obj,entry[2],tar))
 		return ret_list
 
-
+	'''
 
 	def expandrules(self,rule_list,attr_dict):
 		ret_list = []
@@ -297,10 +313,11 @@ class sub_feature(object):
 			if attr in self.attribute_features.keys():
 				self.attribute_features[attr] = True
 
-		
+		#self.attribute_vec  = self.attrfeatures2vec(self.attribute_features)
 
 		#untrusted features
-		if "untrusted_app" in self.typename  or "isolated_app" == self.typename or "shell" == self.typename:
+		if "untrusted_app" in self.typename  or "isolated_app" == self.typename or "shell" == self.typename \
+		or "ephemeral_app" == self.typename or "untrusted_v2_app" == self.typename:
 			self.untrusted_domain = True  #untrusted_app\isolated_app\shell
 		else:
 			self.untrusted_domain = False
@@ -309,7 +326,8 @@ class sub_feature(object):
 		
 		#self.typetransition_path = [] #kernel,init,zygote,untrusted_app
 		path = typetransition_lookup(devins.typetrans_dict,"kernel",arg)
-		if path!=[]:
+		#print "typetransition lookup result:",path
+		if path!=[]:#Got from typetransition in sepolicy
 			if path[-1]!= arg:
 				path.append(arg)
 
@@ -318,27 +336,100 @@ class sub_feature(object):
 			self.typetransition_distance = self.typetransition_path.index(arg)
 		
 			exec_file = typetransition_file_lookup(devins.typetrans_dict,arg)
-			self.exec_file_feature = obj_feature(exec_file)
+			self.exec_file_feature = obj_feature(devins,exec_file)
 
 		else:
 			#1.vendor_init is forked by init label
 			#2.others are forked by zygote
 			if self.typename == "vendor_init":
-				self.typetransition_path = ["init","vendor_init"]
+				self.typetransition_path = ["kernel","init","vendor_init"]
 				self.typetransition_distance = 1
 				exec_file = 'init_exec'
-				self.exec_file_feature = obj_feature(exec_file)
-
+				self.exec_file_feature = obj_feature(devins,exec_file)
 			else:
-				self.typetransition_path = ["init","zygote"]+[arg]
-				self.typetransition_distance = 2
-				exec_file = 'zygote_exec'
-				self.exec_file_feature = obj_feature(exec_file)
+				if ("_app") in self.typename or self.typename =="system_server" or \
+				self.typename in runtime_collector.seapp_info:
+					self.typetransition_path = ["kernel","init","zygote"]+[arg]
+					self.typetransition_distance = 4
+					exec_file = 'zygote_fork'
+					self.exec_file_feature = obj_feature(devins,exec_file)
+				else:
+					self.typetransition_path = ["unknown"]
+					self.typetransition_distance = -1
+					exec_file = 'unknown'
+					self.exec_file_feature = obj_feature(devins,exec_file)
+
+
+		#user who has this context when running. Read from an prepared dict file
+		self.runtime_user = runtime_collector.runtime_feature_collector(devins,self.typetransition_path)
+		if self.runtime_user != None:
+			uid = userlevel_dict.get(self.runtime_user)
+			if uid == 0:
+				self.userlevel = "root"
+			if 1000<=uid<2000:
+				self.userlevel = "system"
+			if 2000<=uid<2900:
+				self.userlevel = "shell"
+			if 3000<=uid<5000:
+				self.userlevel = "supplemental group"
+			if 9997<=uid<10000:
+				self.userlevel = "app_shared"
+			if 10000<=uid<20000:
+				self.userlevel = "app"
+			if 20000<=uid<30000:
+				self.userlevel = "app cache data group"
+			if 30000<=uid<40000:
+				self.userlevel = "app external data group"
+			if 40000<=uid<50000:
+				self.userlevel = "app external cache data group"
+			if 50000<=uid<60000:
+				self.userlevel = "app public data"
+			if uid == 65534:
+				self.userlevel = "nomapping user"
+			if 90000<=uid<100000:
+				self.userlevel = "isolated"
+			else :
+				self.userlevel = "vendor"
+
+
+		else:
+			#No related exec_file in fs, or not invoked by rc files
+			print "Unknown User (%s) for subject (%s)"%(self.runtime_user,arg)
+			self.userlevel = -1
+
+
+
+
+		#dictorize for sklearn DictVectorizer 
+		self.feature_dict = self.attribute_features
+		self.feature_dict["untrusted_domain"] = self.untrusted_domain
+		self.feature_dict["typetransition_distance"] = self.typetransition_distance
+		self.feature_dict["userlevel"] = self.userlevel
+		self.feature_dict["user"] = self.runtime_user
 
 		#print self.typetransition_path,exec_file
 
+	def __repr__(self):
+		ret_expr = ''
+		ret_expr += "Type Name: %s \n" % self.typename
+		#ret_expr += "Attribute Features:%s \n"% self.attribute_vec
+		ret_expr += "Typetransition Path (length:%d):%s \n"%(self.typetransition_distance,self.typetransition_path)
+		ret_expr += "Exec File :%s \n" %self.exec_file_feature.typename
+		ret_expr += str(self.feature_dict)
+		return ret_expr
 
+	def attrfeatures2vec(self,attribute_features):
+		print "Vector:"
+		vec = [0]*10
+		feature_domain_lookuplist = ["domain","mlstrustedsubject","coredomain","appdomain","untrusted_app_all",\
+									"netdomain","bluetoothdomain","binderservicedomain","halserverdomain","halclientdomain"]
 
+		for attr in attribute_features:
+			if attribute_features[attr]==True:
+				idx = feature_domain_lookuplist.index(attr)
+				vec[idx] = 1
+		
+		return vec
 
 
 class obj_feature(object):
@@ -351,7 +442,7 @@ class obj_feature(object):
 		self.untrusted_file = False #create/write by an untrusted domain
 
 
-	def filecontext_lookup():
+	def filecontext_lookup(self,devins,arg):
 		pass
 
 #----class def ends------#
@@ -368,18 +459,21 @@ def typetransition_file_lookup(typetrans_dict,typename):
 def typetransition_lookup(typetrans_dict,start,end):
 	#find all paths from start("kernel") to end (target)
 	path = []
+	paths = []
 	#print "Trying to find path from %s to %s recuresivly" % (start,end)
 	if end == "kernel" or end == "su" or end =="crash_dump":
 		return [end]
-
+	count = 0
 	for src_type in typetrans_dict:
 		for entry in typetrans_dict[src_type]:
 			if entry[1] == end:
+				count = 1
 				#print src_type,typetrans_dict[src_type],type(typetrans_dict[src_type])
 				path += typetransition_lookup(typetrans_dict,start,src_type)
 				if not src_type in path:
 					path.append(src_type)
-
+		if count != 0 :
+			break
 	return path
 
 
@@ -399,4 +493,13 @@ def get_attr(dev_instance,typename):
 if __name__ == '__main__':
 	#test
 	devins = dev("Pixel",expanded_neal=False)
-	sub_feature(devins,"servicemanager")
+	for testcase in ["adbd","untrusted_app_25","system_server","shell","system_server","qtimeservice"]:
+		print "-------------"
+		print testcase
+		feat_ins = sub_feature(devins,testcase)
+		print feat_ins.feature_dict
+		print feat_ins.typetransition_path
+		print feat_ins.runtime_user
+
+
+	

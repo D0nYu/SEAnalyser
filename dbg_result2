@@ -11,1514 +11,546 @@ No typetransition in this file
 In file [plat_pub_versioned.cil]
 allow_rules: 3518
 No typetransition in this file
-finegrained neverallow:5780653
+indirect_neverallow: 115058
+finegrained neverallow:6010769
+Typetransitions: 470
 1315
-target_rule: ('isolated_app','app_data_file','dir',['getattr'])
-traceur_app
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-untrusted_app_25
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-secure_element
-[1, 0, 1, 1, 0, 0, 0, 1, 0, 1]
-con_monitor_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-ephemeral_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-qcneservice
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-nfc
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 1]
-secure_element
-[1, 0, 1, 1, 0, 0, 0, 1, 0, 1]
-hardware_info_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-untrusted_app_27
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-platform_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-mediaprovider
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-untrusted_v2_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-wfc_activation_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-ramdump_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-su
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 1]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-shared_relro
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-ssr_detector
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-bluetooth
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 1]
-untrusted_app
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-profman
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-untrusted_app
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-profman
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-untrusted_app_27
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-untrusted_v2_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-system_server
-[1, 1, 1, 0, 0, 1, 1, 1, 0, 1]
-shared_relro
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-untrusted_app_25
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-qtimeservice
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-uncrypt
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-logger_app
-[1, 0, 0, 1, 0, 1, 0, 0, 0, 0]
-wfc_activation_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-qtimeservice
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-uncrypt
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-priv_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-ephemeral_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-google_camera_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-qtelephony
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-bluetooth
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 1]
-ramdump_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-su
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 1]
-radio
-[1, 1, 1, 1, 0, 1, 1, 1, 0, 1]
-radio
-[1, 1, 1, 1, 0, 1, 1, 1, 0, 1]
-qtelephony
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-traceur_app
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-logger_app
-[1, 0, 0, 1, 0, 1, 0, 0, 0, 0]
-installd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-qcneservice
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-runas
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-dexoptanalyzer
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-ssr_detector
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-google_camera_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-runas
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-hardware_info_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-platform_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-mediaprovider
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-nfc
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 1]
-installd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-priv_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-con_monitor_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-target_rule: ('vold','rootfs','filesystem',['remount'])
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-target_rule: ('hal_camera_default','shell_exec','file',['read', 'getattr', 'open'])
-su
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 1]
-shared_relro
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-vold
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 1]
-dhcp
-[1, 0, 1, 0, 0, 1, 0, 0, 0, 0]
-untrusted_app
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-platform_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-ssr_detector
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-perfprofd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-install_recovery
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-crash_dump
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-move-widevine-data-sh
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-priv_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-bluetooth
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 1]
-qtimeservice
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-radio
-[1, 1, 1, 1, 0, 1, 1, 1, 0, 1]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-update_engine
-[1, 0, 1, 0, 0, 1, 0, 0, 0, 1]
-otapreopt_slot
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-install_recovery
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-hardware_info_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-postinstall
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-wfc_activation_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-ims
-[1, 0, 0, 0, 0, 1, 0, 0, 0, 0]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-untrusted_app_27
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-statsd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 1]
-untrusted_app_25
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-vold
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 1]
-qtimeservice
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-google_camera_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-blkid
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-ramdump_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-cppreopts
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-dumpstate
-[1, 1, 1, 0, 0, 1, 0, 0, 0, 1]
-qtelephony
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-isolated_app
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-adbd
-[1, 1, 1, 0, 0, 1, 0, 0, 0, 1]
-qcneservice
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-mediaprovider
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-con_monitor_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-blkid_untrusted
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-secure_element
-[1, 0, 1, 1, 0, 0, 0, 1, 0, 1]
-netd
-[1, 1, 1, 0, 0, 1, 0, 0, 0, 0]
-nfc
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 1]
-netd
-[1, 1, 1, 0, 0, 1, 0, 0, 0, 0]
-platform_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-vold
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 1]
-vold_prepare_subdirs
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-untrusted_app_25
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-vold
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 1]
-google_camera_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-cnd
-[1, 0, 0, 0, 0, 1, 0, 0, 0, 0]
-ramdump_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-qtelephony
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-wfc_activation_app
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-isolated_app
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-mediaprovider
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-con_monitor_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-secure_element
-[1, 0, 1, 1, 0, 0, 0, 1, 0, 1]
-asan_extract
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-preloads_copy
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-incidentd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-rild
-[1, 0, 0, 0, 0, 1, 0, 0, 1, 0]
-su
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 1]
-crash_dump
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-shared_relro
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-traceur_app
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-cppreopts
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-untrusted_app
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-ssr_detector
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-postinstall
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-dhcp
-[1, 0, 1, 0, 0, 1, 0, 0, 0, 0]
-system_server
-[1, 1, 1, 0, 0, 1, 1, 1, 0, 1]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-logger_app
-[1, 0, 0, 1, 0, 1, 0, 0, 0, 0]
-otapreopt_slot
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-dumpstate
-[1, 1, 1, 0, 0, 1, 0, 0, 0, 1]
-priv_app
-[1, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-init
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-bluetooth
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 1]
-radio
-[1, 1, 1, 1, 0, 1, 1, 1, 0, 1]
-update_engine
-[1, 0, 1, 0, 0, 1, 0, 0, 0, 1]
-traceur_app
-[1, 0, 1, 1, 0, 0, 0, 0, 0, 0]
-qcneservice
-[1, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-hardware_info_app
-[1, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-perfprofd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-perfprofd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-logger_app
-[1, 0, 0, 1, 0, 1, 0, 0, 0, 0]
-system_app
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
-shell
-[1, 1, 1, 1, 0, 1, 0, 0, 0, 0]
-perfprofd
-[1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
-untrusted_app_27
-[1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
-nfc
-[1, 0, 1, 1, 0, 1, 0, 1, 0, 1]
+--------------------------
+[Target_rule]: ('isolated_app','app_data_file','dir',['getattr'])
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 90000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+[Allow Subs]: 33
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (profman)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (runas)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 2000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (dexoptanalyzer)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['su']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 0, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+[Neverallow Subs]: 68
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_tv_input_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (wcnss_filter)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_tv_cec_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_vehicle_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_thermal_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_evs_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_radio_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_dumpstate_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vendor_shell)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vendor_init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1002, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_audiocontrol_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_lowpan_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_tetheroffload_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_confirmationui_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_authsecret_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_ir_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 90000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1046, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_radio_config_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_secure_element_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 9999, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1010, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (hal_broadcastradio_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_wifi_offload_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (perfetto)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (imscm)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 9999, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+--------------------------
+--------------------------
+[Target_rule]: ('vold','rootfs','filesystem',['remount'])
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+[Allow Subs]: 1
+Unknown User (None) for subject (init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+[Neverallow Subs]: 204
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1021, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+Unknown User (None) for subject (sgdisk)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1027, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (idmap)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (runas)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vendor_init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (incident_helper)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (wpantund)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (bufferhubd)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1066, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+Unknown User (None) for subject (hal_evs_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (postinstall)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_tetheroffload_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (wcnss_filter)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 9999, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (asan_extract)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1036, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (toolbox)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (preloads_copy)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 9999, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+Unknown User (None) for subject (recovery_refresh)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vdc)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_vehicle_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (dnsmasq)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (imscm)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (fingerprintd)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (clatd)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+Unknown User (None) for subject (dex2oat)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (stats)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vold_prepare_subdirs)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vr_hwc)
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (preopt2cachename)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (dhcp)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (fsck)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_confirmationui_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (tzdatacheck)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (dexoptanalyzer)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (incident)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1041, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1016, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_radio_config_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_secure_element_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1010, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1041, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+Unknown User (None) for subject (perfetto)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1046, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (netutils_wrapper)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_tv_cec_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (ppp)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (install_recovery)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_audiocontrol_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (e2fs)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (vendor_shell)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_thermal_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1002, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (hal_authsecret_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (postinstall_dexopt)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 5, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_ir_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (recovery_persist)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1058, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1047, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1067, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1019, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1016, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (inputflinger)
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1036, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_broadcastradio_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1020, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (bpfloader)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1047, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+Unknown User (None) for subject (sdcardd)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 2000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1017, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_dumpstate_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1013, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (move-widevine-data-sh)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_lowpan_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_tv_input_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['crash_dump']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 0, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (otapreopt_slot)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (cppreopts)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (hal_wifi_offload_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 90000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (profman)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1010, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (virtual_touchpad)
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1040, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (bootstat)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1010, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['su']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 0, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+Unknown User (None) for subject (hal_radio_default)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1003, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (performanced)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+--------------------------
+--------------------------
+[Target_rule]: ('hal_camera_default','shell_exec','file',['read', 'getattr', 'open'])
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1047, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+[Allow Subs]: 51
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': True, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (vold_prepare_subdirs)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (move-widevine-data-sh)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 1000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['crash_dump']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 0, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1066, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 2000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (postinstall)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 3, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (otapreopt_slot)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (cppreopts)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (dhcp)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1001, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (install_recovery)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (asan_extract)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+Unknown User (None) for subject (preloads_copy)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': False}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 1067, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': True, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': False, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}
+No init in Trans ['su']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 0, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': True, 'netdomain': True}
+No init in Trans ['unknown']
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': -1, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': True, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 90000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': False}
+[Neverallow Subs]: 4
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': True, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+{'domain': True, 'appdomain': True, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 10000, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': True, 'typetransition_distance': 4, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': False, 'netdomain': True}
+Unknown User (None) for subject (vendor_init)
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': -1, 'coredomain': False, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 1, 'halserverdomain': False, 'mlstrustedsubject': True, 'halclientdomain': False, 'netdomain': False}
+--------------------------
+--------------------------
+[Target_rule]: ('update_engine','proc','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open'])
+{'domain': True, 'appdomain': False, 'binderservicedomain': False, 'untrusted_app_all': False, 'userlevel': 0, 'coredomain': True, 'bluetoothdomain': False, 'untrusted_domain': False, 'typetransition_distance': 2, 'halserverdomain': False, 'mlstrustedsubject': False, 'halclientdomain': True, 'netdomain': True}

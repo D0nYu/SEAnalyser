@@ -1,7 +1,7 @@
 #This script is mainly used to filt all the rules OEM added.
 #functions in cilparser might be used
 import os
-from sklearn.decomposition import PCA
+#from sklearn.decomposition import PCA
 import numpy as np
 
 import cilparser
@@ -12,7 +12,6 @@ import sys
 
 outputdir = "/Users/Don/Desktop/Learning_Exercise/SEAndroid/SEanalyser/raw_policy_tobe_ana/"
 vioneal_outputdir = "/Users/Don/Desktop/Learning_Exercise/SEAndroid/SEanalyser/raw_policy_tobe_ana/vioneal"
-ref_dev = "Pixel"
 dev_list = ["Pixel","HUAWEI_P20","mi8se","HUAWEI_Mate20","HUAWEI_BACAL00"]
 oem_dev_list = dev_list[1::]
 
@@ -167,7 +166,7 @@ def get_related_rules(fr,ref_ins):
 	return (list(set(allow_sub)),list(set(allow_obj)),list(set(neverallow_sub)),list(set(neverallow_obj)))
 
 def check_raw_policy():
-	ref_ins = dev(ref_dev,expanded_neal = False)
+	ref_ins = dev(ref_dev,expanded_neal = True)
 
 	for d in oem_dev_list:
 		#oem_ins = dev(d, expanded_neal= True)
@@ -186,27 +185,25 @@ def check_raw_policy():
 					src_score = 0 
 					fine_rules_set = eval(repr(raw_rule_dict[src_rule]))
 					for fr in fine_rules_set:
-						print "target_rule:",fr
-						exit()
+						print "--------------------------"
+						print "[Target_rule]:",fr
+						src_feature = sub_feature(ref_ins,eval(fr)[0])
+						print repr(src_feature)
+
 						related_rules = get_related_rules(eval(fr),ref_ins)#a tuple of list()
 						subs = get_subs(related_rules)
+
 						trainset_features = []
-						print "Allow Subs:",len(subs[0])
+						print "[Allow Subs]:",len(subs[0])
 						for allowsub in subs[0] :
 							features = sub_feature(ref_ins,allowsub)
-							if features.typetransition_path == []:
-								print "[illegal]",allowsub
-							del(features)
+							print repr(features)
 
-						print "Neverallow Subs"
+						print "[Neverallow Subs]:",len(subs[1])
 						for neverallowsub in subs[1] :
-							features = sub_feature(ref_ins,allowsub)
-							if features.typetransition_path == []:
-								print "[illegal]",neverallowsub
-							else:
-								print "legal:",features.typetransition_path
-							del(features)
-				
+							features = sub_feature(ref_ins,neverallowsub)
+							print repr(features)
+						print "--------------------------"
 						'''
 						X = np.array(trainset_features)
 						if len(features)>= len(subs):
@@ -217,7 +214,7 @@ def check_raw_policy():
 							pca_helper(X) #use MLE to guess the dimension
 						'''
 
-					if count >=50:
+					if count >= 10:
 						exit()
 
 def pca_helper(X):
@@ -264,4 +261,11 @@ def get_feature(ref_dev,typename):
 if __name__ == '__main__':
 	#write_raw_policy_to_ana()
 	#neverallow_result = neverallow_check()
+	'''	
+	ref_ins = dev("Pixel")
+	allowsubs = get_target_finegrained_rules(ref_ins,_type="app_data_file",claz='dir',perms=['getattr'])
+	print allowsubs
+	exit()
+	'''
+
 	check_raw_policy()
