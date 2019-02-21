@@ -18,7 +18,9 @@ oem_dev_list = dev_list[1::]
 def get_diff_allow_list_types(refdev,tardev,**kw):
 	#return a list of featured rules(a list of "rule" class) between aosp types
 	print "Get diffing rules now"
-	ret_list = []
+	ret_list = [] #return the instance of fr
+	ret_list2 = [] #return the list of tuple of (domain,type,class,perm)
+
 	same_rule_list = []
 	src_rule_set = set()
 	ref_allow_set = set()
@@ -34,6 +36,7 @@ def get_diff_allow_list_types(refdev,tardev,**kw):
 				#aka,oem defined types will be include
 				if (not (fr.domain,fr._type,fr.claz,pm) in ref_allow_set):
 					ret_list.append(fr)
+					ret_list2.append((fr.domain,fr._type,fr.claz,pm))
 					#print diff rules:
 					#print "---"
 					#fr.show(perm=pm)
@@ -45,6 +48,7 @@ def get_diff_allow_list_types(refdev,tardev,**kw):
 				if (not (fr.domain,fr._type,fr.claz,pm) in ref_allow_set) and \
 				(fr.domain in refdev.domset and fr._type in refdev.typeset):
 					ret_list.append(fr)
+					ret_list2.append((fr.domain,fr._type,fr.claz,pm))
 
 	'''
 	print "-----statics for src_rules-----:"
@@ -74,19 +78,21 @@ def write_raw_policy_to_ana():
 	print oem_dev_list
 	for oem_dev in oem_dev_list:
 		all_target_rules = get_diff_allow_list_types(ref_devins,dev(oem_dev))
+		#all_target_rules[0] is fr,all_target_rules[1] is the tuple of (d,t,c,p)
 		output_filepath = os.path.join(outputdir,oem_dev)
 		print "Writing to %s"%output_filepath
 		with open(output_filepath,"w") as f:
 			rules_dict = dict()
 			for target_rule in all_target_rules:
-				if rules_dict.get(repr(target_rule.src_rule)) == None:
-					rules_dict[repr(target_rule.src_rule)] = set()
-					rules_dict[repr(target_rule.src_rule)].add(repr(target_rule))
+				if rules_dict.get(repr(target_rule[0].src_rule)) == None:
+					rules_dict[repr(target_rule[0].src_rule)] = set()
+					rules_dict[repr(target_rule[0].src_rule)].add(repr(target_rule[1]))
 				else:
-					rules_dict[repr(target_rule.src_rule)].add(repr(target_rule))
+					rules_dict[repr(target_rule[0].src_rule)].add(repr(target_rule[1]))
 
 			f.write(repr(len(rules_dict))+"\n")
 			f.write(repr(rules_dict))
+		
 
 
 def belongsto(_type,attri,attri_dict):
@@ -267,7 +273,8 @@ def get_feature(ref_dev,typename):
 
 
 if __name__ == '__main__':
-	#write_raw_policy_to_ana()
+	write_raw_policy_to_ana()
+	exit()
 	#neverallow_result = neverallow_check()
 	'''	
 	ref_ins = dev("Pixel")
