@@ -2,6 +2,7 @@ from __future__ import division
 from cilclass import *
 from global_configs import *
 from sklearn.feature_extraction import DictVectorizer
+import numpy as np
 import time,math,logging
 
 class tfidf_calc(object):
@@ -42,8 +43,8 @@ class tfidf_calc(object):
 			else:
 				ret_allow_dict[(feature,True)] = self.freq_calc_rules(feature,True,self.refdev_ins.finegrained_allow_list)
 				ret_neverallow_dict[(feature,True)] = self.freq_calc_rules(feature,True,self.refdev_ins.finegrained_neal_list)
-				ret_allow_dict[(feature,False)] = self.freq_calc_rules(feature,False,self.refdev_ins.finegrained_allow_list)
-				ret_neverallow_dict[(feature,False)] = self.freq_calc_rules(feature,False,self.refdev_ins.finegrained_neal_list)
+				#ret_allow_dict[(feature,False)] = self.freq_calc_rules(feature,False,self.refdev_ins.finegrained_allow_list)
+				#ret_neverallow_dict[(feature,False)] = self.freq_calc_rules(feature,False,self.refdev_ins.finegrained_neal_list)
 		return ret_allow_dict,ret_neverallow_dict
 
 
@@ -77,7 +78,7 @@ class tfidf_calc(object):
 			#kv[0] = feature_name ; kv[1] = value
 			tf = self.freq_calc_subs(kv,subs)
 			if tf == 0 :
-				logging.warning("tf =0 for %s"%str(kv))
+				#logging.warning("tf =0 for %s"%str(kv))
 				weight_dict[kv] = 0
 			else:
 				idf = math.log(1/self.global_allow_freq_dict[kv])
@@ -99,27 +100,72 @@ class tfidf_calc(object):
 				weight_dict[kv] = 0
 			else:
 				idf = math.log(1/self.global_neverallow_freq_dict[kv])
-				if tf * idf > 1/math.e: 
-					weight_dict[kv] = tf * idf #
-				else:
-					weight_dict[kv] = 0 #freq of this feature is close to global
+				weight_dict[kv] = tf * idf #
 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
 			
 		return weight_dict
 			
+	def weight_dict_vectorize(self,weight_dict):
+		#weight < 1/e will be set to 0
+		ret_vec = [0] * 17
+
+		for f in weight_dict:
+			if self.global_allow_freq_dict[f]<0.1 and self.global_neverallow_freq_dict[f]<0.1:
+				weight_dict[f] = 0
+
+		#attr_feature weights (ordered):
+		#"domain","mlstrustedsubject","coredomain","appdomain","untrusted_app_all",\
+		#"netdomain","bluetoothdomain","binderservicedomain","halserverdomain","halclientdomain",\
+		#"untrusted_domain"
+		ret_vec[0] = weight_dict[("domain",True)]
+		ret_vec[1] = weight_dict[("mlstrustedsubject",True)]
+		ret_vec[2] = weight_dict[("coredomain",True)]
+		ret_vec[3] = weight_dict[("appdomain",True)]
+		ret_vec[4] = weight_dict[("untrusted_app_all",True)]
+		ret_vec[5] = weight_dict[("netdomain",True)]
+		ret_vec[6] = weight_dict[("bluetoothdomain",True)]
+		ret_vec[7] = weight_dict[("binderservicedomain",True)]
+		ret_vec[8] = weight_dict[("halserverdomain",True)]
+		ret_vec[9] = weight_dict[("halclientdomain",True)]
+		ret_vec[10] = weight_dict[("untrusted_domain",True)]
+
+		#userlevel_feature weights:(ordered):
+		#root,system,shell,app_shared,app,isolated. (000000 for unknown)
+		ret_vec[11] = weight_dict[("userlevel","root")]
+		ret_vec[12] = weight_dict[("userlevel","system")]
+		ret_vec[13] = weight_dict[("userlevel","shell")]
+		ret_vec[14] = weight_dict[("userlevel","app_shared")]
+		ret_vec[15] = weight_dict[("userlevel","app")]
+		ret_vec[16] = weight_dict[("userlevel","isolated")]
 
 
+		for weight in ret_vec:
+			if weight < 1/math.e:
+				ret_vec[ret_vec.index(weight)] = 0 
+		return ret_vec
 
-	def calc_distance(src_feature,target_feature,weight_dict):
-		src_feature.feature 
 
+	def calc_distance(self,src_feature,target_feature,weight_dict):
+		weight_dict_vec = self.weight_dict_vectorize(weight_dict)
+		#print src_feature.feature_vector
+		#print target_feature.feature_vector
+		#print weight_vec
+		weight_array = np.array(weight_dict_vec)
+		a1 = np.array(src_feature.feature_vector) 
+		a2 = np.array(target_feature.feature_vector)
+		a1_weight = np.multiply(a1,weight_array)
+		a2_weight = np.multiply(a2,weight_array)
+		cosine_distance = np.dot(a1_weight, a2_weight) / (np.sqrt(np.dot(a1_weight,a1_weight)) * np.sqrt(np.dot(a2_weight,a2_weight)))
+		return cosine_distance
 
 if __name__ == '__main__':
 	refdev_ins = dev("Pixel",expanded_neal=False)
 	#print "untrusted_app" in refdev_ins.domset
 	tfidf_ins = tfidf_calc(refdev_ins)
-	
+	print tfidf_ins.global_allow_freq_dict
+	print tfidf_ins.global_neverallow_freq_dict
+
 	#print repr(tfidf_calc.global_allow_freq_dict)
 	#print repr(tfidf_calc.global_neverallow_freq_dict)
 	test_subs = ["isolated_app","untrusted_v2_app","logger_app","priv_app"]

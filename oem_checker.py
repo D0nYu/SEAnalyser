@@ -186,41 +186,47 @@ def check_raw_policy():
 					fine_rules_set = eval(repr(raw_rule_dict[src_rule]))
 					for fr in fine_rules_set:
 						print "--------------------------"
-						print "[Target_rule]:",fr
+						print "[Target_rule]:\033[1;35m %s\033[0m!"%str(fr)
 						src_sub = eval(fr)[0]
 						src_feature = sub_feature(ref_ins,src_sub)
-						print repr(src_feature)
+						#print repr(src_feature)
 
 						related_rules = get_related_rules(eval(fr),ref_ins)#a tuple of list()
 						subs = get_subs(related_rules)
-
+						print "Number of related_rules(allow,neverallow)(%d,%d)"%(len(subs[0]),len(subs[1]))
 						if len(subs[0])>= 5 and len(subs[1])>= 5:
 							print "[Allow Subs]:\n",len(subs[0])
 							#calc allow weights among subs
 							#Get a weight list for each feature
 							distance_dict = dict()
+							neverallowdistance_dict = dict()
 							allow_weight = tfidf_ins.calc_allow_weight(subs[0]) 
+							print "[ALLOW_SUBS]:"
 							print subs[0]
+							print "[ALLOW_WEIGHT]:"
 							print allow_weight
 
 							for allowsub in subs[0] :#calc distance between src_sub and related_allow subs
 								feature = sub_feature(ref_ins,allowsub)
-								distance_dict[allowsub] = tfidf_calc.calc_distance(src_feature,feature,allow_weight)
-
+								distance_dict[allowsub] = tfidf_ins.calc_distance(src_feature,feature,allow_weight)
+							print "[ALLOW_DISTANCE]:"
+							print distance_dict
 
 							print "[Neverallow Subs]:\n",len(subs[1])
 
 							neverallow_weight = tfidf_ins.calc_neverallow_weight(subs[1])
+							print "[NEVERALLOW_SUBS]:"
 							print subs[1]
+							print "[NEVERALLOW_WEIGHT]:"
 							print neverallow_weight
 
 							for neverallowsub in subs[1] :
 								feature = sub_feature(ref_ins,neverallowsub)
-								distance_dict[allowsub] = tfidf_calc.calc_distance(src_feature,feature,neverallow_weight)
-			
-							print "--------------------------"
+								neverallowdistance_dict[neverallowsub] = tfidf_ins.calc_distance(src_feature,feature,neverallow_weight)
+							print "[NEVERALLOW_DISTANCE]:"
+							
 							print distance_dict
-
+							print "--------------------------"
 							if count >= 10:
 								exit()
 

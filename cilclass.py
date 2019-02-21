@@ -407,8 +407,41 @@ class sub_feature(object):
 		#self.feature_dict["typetransition_distance"] = self.typetransition_distance
 		self.feature_dict["userlevel"] = self.userlevel
 		self.feature_dict["user"] = self.runtime_user
+		self.feature_vector = self.feature_vectorize()
 
 		#print self.typetransition_path,exec_file
+	def feature_vectorize(self):
+		#print "Vector:"
+		attr_vec = [0]*11
+		feature_domain_lookuplist = ["domain","mlstrustedsubject","coredomain","appdomain","untrusted_app_all",\
+									"netdomain","bluetoothdomain","binderservicedomain","halserverdomain","halclientdomain",\
+									"untrusted_domain"]
+
+		for attr in self.feature_dict:
+			if self.feature_dict[attr]==True:
+				idx = feature_domain_lookuplist.index(attr)
+				attr_vec[idx] = 1
+		userlevel_vec = [0] * 6 #dummy encoding for userlevel
+
+		#root,system,shell,app_shared,app,isolated. (000000 for unknown)
+		if self.userlevel == "root":
+			userlevel_vec[0] = 1 
+		if self.userlevel == "system":
+			userlevel_vec[1] = 1 
+		if self.userlevel == "shell":
+			userlevel_vec[2] = 1
+		if self.userlevel == "app_shared":
+			userlevel_vec[3] = 1 
+		if self.userlevel == "app":
+			userlevel_vec[4] = 1
+		if self.userlevel == "isolated":
+			userlevel_vec[5] = 1
+
+
+
+		return attr_vec+userlevel_vec
+	
+
 
 	def __repr__(self):
 		ret_expr = ''
