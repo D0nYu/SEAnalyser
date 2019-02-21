@@ -228,7 +228,9 @@ def recursively_expand_attr(attr_name,attri_dict):
 	#return a set 
 	andset = set()
 	notset = set()
-
+	if attr_name == "all":
+		attr_name = "domain"
+		
 	if attri_dict.get(attr_name)==None:
 		#not an attribute but a normal context
 		andset.add(attr_name)

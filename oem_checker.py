@@ -1,12 +1,12 @@
 #This script is mainly used to filt all the rules OEM added.
 #functions in cilparser might be used
 import os
-#from sklearn.decomposition import PCA
 import numpy as np
 
 import cilparser
 from cilclass import *
 from rules_statistic import *
+from tfidf_calc import *
 import sys
 
 
@@ -167,7 +167,7 @@ def get_related_rules(fr,ref_ins):
 
 def check_raw_policy():
 	ref_ins = dev(ref_dev,expanded_neal = True)
-
+	tfidf_ins = tfidf_calc(ref_ins)
 	for d in oem_dev_list:
 		#oem_ins = dev(d, expanded_neal= True)
 		featured_policy_filepath = os.path.join(outputdir,d)
@@ -187,42 +187,42 @@ def check_raw_policy():
 					for fr in fine_rules_set:
 						print "--------------------------"
 						print "[Target_rule]:",fr
-						src_feature = sub_feature(ref_ins,eval(fr)[0])
+						src_sub = eval(fr)[0]
+						src_feature = sub_feature(ref_ins,src_sub)
 						print repr(src_feature)
 
 						related_rules = get_related_rules(eval(fr),ref_ins)#a tuple of list()
 						subs = get_subs(related_rules)
 
-						trainset_features = []
-						print "[Allow Subs]:",len(subs[0])
-						for allowsub in subs[0] :
-							features = sub_feature(ref_ins,allowsub)
-							print repr(features)
+						if len(subs[0])>= 5 and len(subs[1])>= 5:
+							print "[Allow Subs]:\n",len(subs[0])
+							#calc allow weights among subs
+							#Get a weight list for each feature
+							distance_dict = dict()
+							allow_weight = tfidf_ins.calc_allow_weight(subs[0]) 
+							print subs[0]
+							print allow_weight
 
-						print "[Neverallow Subs]:",len(subs[1])
-						for neverallowsub in subs[1] :
-							features = sub_feature(ref_ins,neverallowsub)
-							print repr(features)
-						print "--------------------------"
-						'''
-						X = np.array(trainset_features)
-						if len(features)>= len(subs):
-							print "Sample not enough.(features:%d;subs:%d)"%(len(features),len(subs))
-							#pca_helper(X) 
-						else:
-							#print len(trainset_features),len(subs)
-							pca_helper(X) #use MLE to guess the dimension
-						'''
+							for allowsub in subs[0] :#calc distance between src_sub and related_allow subs
+								feature = sub_feature(ref_ins,allowsub)
+								distance_dict[allowsub] = tfidf_calc.calc_distance(src_feature,feature,allow_weight)
 
-					if count >= 10:
-						exit()
 
-def pca_helper(X):
+							print "[Neverallow Subs]:\n",len(subs[1])
 
-	pca = PCA(n_components = 'mle')
-	print pca.fit_transform(X)
-	print "pca ratio:"
-	print pca.explained_variance_ratio_
+							neverallow_weight = tfidf_ins.calc_neverallow_weight(subs[1])
+							print subs[1]
+							print neverallow_weight
+
+							for neverallowsub in subs[1] :
+								feature = sub_feature(ref_ins,neverallowsub)
+								distance_dict[allowsub] = tfidf_calc.calc_distance(src_feature,feature,neverallow_weight)
+			
+							print "--------------------------"
+							print distance_dict
+
+							if count >= 10:
+								exit()
 
 
 

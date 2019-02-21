@@ -165,9 +165,12 @@ def lookupdict(typename):
 #core function
 def runtime_feature_collector(devins,trans_path):
 	#exported function used by cilclass init (when sub_feature is initialized)
-
+	if trans_path == ["unknown"]:
+		#not a process's domain
+		#such as *_tmpfs domain releted to fs operation rules
+		return "not_proc"
 	if not ("init" in trans_path):
-		print "No init in Trans",trans_path
+		#print "No init in Trans",trans_path
 		#crash_dump,su,dumpstate...
 		return "root"
 	if not os.path.exists(usr2proc_mapping):
@@ -180,7 +183,7 @@ def runtime_feature_collector(devins,trans_path):
 	typename = trans_path[idx]
 	parent = trans_path[idx-1]
 
-	if typename == "init":
+	if typename == "init" or typename =="vendor_init":
 		user = "root"
 		return user
 
@@ -201,6 +204,8 @@ def runtime_feature_collector(devins,trans_path):
 			#same as parent's user.recursivly call itself to get parent's user
 			return runtime_feature_collector(devins,trans_path[0:-1])
 		else:
+			#Not rc file record in all its paths
+			#Maybe not used in this device but still remained in the policy file
 			return "Unknown"
 #function ends
 ######

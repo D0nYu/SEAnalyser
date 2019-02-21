@@ -24,11 +24,16 @@ outputdir = os.path.join(work_path,"SEanalyser/raw_policy_tobe_ana/")
 vioneal_outputdir = os.path.join(outputdir,"vioneal")
 related_outputdir = os.path.join(outputdir,"related_rules_cases")
 usr2proc_mapping = os.path.join(outputdir,"ref_usr2proc_mapping")
+tf_idf_allow_data = os.path.join(outputdir,"tf_idf_allow_data")
+tf_idf_neverallow_data = os.path.join(outputdir,"tf_idf_neverallow_data")
 
 #Set ref_dev and devices to be analysed
 ref_dev = "Pixel"
 dev_list = ["Pixel","HUAWEI_P20","mi8se","HUAWEI_Mate20","HUAWEI_BACAL00"]
 oem_dev_list = dev_list[1::]
 
+#features used for tf-df_calc:
+feature_dict_keys = ["domain","mlstrustedsubject","coredomain","appdomain",\
+		"untrusted_app_all","netdomain","bluetoothdomain","binderservicedomain",\
+		"halserverdomain","halclientdomain","untrusted_domain","userlevel"]
 
-#Set path of runtime rc files 

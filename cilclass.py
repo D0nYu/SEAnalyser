@@ -347,7 +347,7 @@ class sub_feature(object):
 				exec_file = 'init_exec'
 				self.exec_file_feature = obj_feature(devins,exec_file)
 			else:
-				if ("_app") in self.typename or self.typename =="system_server" or \
+				if self.typename.endswith("_app") or self.typename =="system_server" or \
 				self.typename in runtime_collector.seapp_info:
 					self.typetransition_path = ["kernel","init","zygote"]+[arg]
 					self.typetransition_distance = 4
@@ -362,7 +362,8 @@ class sub_feature(object):
 
 		#user who has this context when running. Read from an prepared dict file
 		self.runtime_user = runtime_collector.runtime_feature_collector(devins,self.typetransition_path)
-		if self.runtime_user != None:
+		self.userlevel = ''
+		if self.runtime_user != None and self.runtime_user != "not_proc":
 			uid = userlevel_dict.get(self.runtime_user)
 			if uid == 0:
 				self.userlevel = "root"
@@ -370,32 +371,32 @@ class sub_feature(object):
 				self.userlevel = "system"
 			if 2000<=uid<2900:
 				self.userlevel = "shell"
-			if 3000<=uid<5000:
+			if 3000<=uid<5000: #not used
 				self.userlevel = "supplemental group"
-			if 9997<=uid<10000:
+			if 9997<=uid<10000: 
 				self.userlevel = "app_shared"
 			if 10000<=uid<20000:
 				self.userlevel = "app"
-			if 20000<=uid<30000:
+			if 20000<=uid<30000:#not used
 				self.userlevel = "app cache data group"
-			if 30000<=uid<40000:
+			if 30000<=uid<40000:#not used
 				self.userlevel = "app external data group"
-			if 40000<=uid<50000:
+			if 40000<=uid<50000:#not used
 				self.userlevel = "app external cache data group"
-			if 50000<=uid<60000:
+			if 50000<=uid<60000:#not used
 				self.userlevel = "app public data"
-			if uid == 65534:
+			if uid == 65534:#not used
 				self.userlevel = "nomapping user"
 			if 90000<=uid<100000:
 				self.userlevel = "isolated"
-			else :
-				self.userlevel = "vendor"
+			if self.userlevel == '':
+				self.userlevel = "unknown_proc"
 
 
 		else:
 			#No related exec_file in fs, or not invoked by rc files
-			print "Unknown User (%s) for subject (%s)"%(self.runtime_user,arg)
-			self.userlevel = -1
+			#print "Unknown User (%s) for subject (%s)"%(self.runtime_user,arg)
+			self.userlevel = "not_proc" #means not a proc
 
 
 
@@ -403,7 +404,7 @@ class sub_feature(object):
 		#dictorize for sklearn DictVectorizer 
 		self.feature_dict = self.attribute_features
 		self.feature_dict["untrusted_domain"] = self.untrusted_domain
-		self.feature_dict["typetransition_distance"] = self.typetransition_distance
+		#self.feature_dict["typetransition_distance"] = self.typetransition_distance
 		self.feature_dict["userlevel"] = self.userlevel
 		self.feature_dict["user"] = self.runtime_user
 
@@ -493,7 +494,7 @@ def get_attr(dev_instance,typename):
 if __name__ == '__main__':
 	#test
 	devins = dev("Pixel",expanded_neal=False)
-	for testcase in ["adbd","untrusted_app_25","system_server","shell","system_server","qtimeservice"]:
+	for testcase in ["location","hal_graphics_allocator_default","hal_tv_input_default","untrusted_app_25","system_server","logger_app","hardware_info_app_tmpfs","pdx_display_client_server_type","profman","surfaceflinger"]:
 		print "-------------"
 		print testcase
 		feat_ins = sub_feature(devins,testcase)
