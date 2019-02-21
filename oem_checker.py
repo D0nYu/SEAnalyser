@@ -31,6 +31,7 @@ def get_diff_allow_list_types(refdev,tardev,**kw):
 		for pm in fr.perms:
 			if "include_oem_types" in kw and kw["include_oem_types"] == True:
 				#all types including oem types not shown in ref device will be returned 
+				#aka,oem defined types will be include
 				if (not (fr.domain,fr._type,fr.claz,pm) in ref_allow_set):
 					ret_list.append(fr)
 					#print diff rules:
@@ -38,8 +39,9 @@ def get_diff_allow_list_types(refdev,tardev,**kw):
 					#fr.show(perm=pm)
 					#src_rule_set.add(str(fr.src_rule.tuple_type()))
 					#fr.src_rule.show()
-			else : #all oem defined types will not shown in the result. 
-					#aka:only types connected and defined in aosp will be returned 
+			else : 
+				#all oem defined types will not shown in the result. 
+				#aka:only types connected and defined in aosp will be returned 
 				if (not (fr.domain,fr._type,fr.claz,pm) in ref_allow_set) and \
 				(fr.domain in refdev.domset and fr._type in refdev.typeset):
 					ret_list.append(fr)
@@ -198,8 +200,8 @@ def check_raw_policy():
 							print "[Allow Subs]:\n",len(subs[0])
 							#calc allow weights among subs
 							#Get a weight list for each feature
-							distance_dict = dict()
-							neverallowdistance_dict = dict()
+							allow_distance_dict = dict()
+							neverallow_distance_dict = dict()
 							allow_weight = tfidf_ins.calc_allow_weight(subs[0]) 
 							print "[ALLOW_SUBS]:"
 							print subs[0]
@@ -210,7 +212,7 @@ def check_raw_policy():
 								feature = sub_feature(ref_ins,allowsub)
 								distance_dict[allowsub] = tfidf_ins.calc_distance(src_feature,feature,allow_weight)
 							print "[ALLOW_DISTANCE]:"
-							print distance_dict
+							print allow_distance_dict
 
 							print "[Neverallow Subs]:\n",len(subs[1])
 
@@ -225,7 +227,7 @@ def check_raw_policy():
 								neverallowdistance_dict[neverallowsub] = tfidf_ins.calc_distance(src_feature,feature,neverallow_weight)
 							print "[NEVERALLOW_DISTANCE]:"
 							
-							print distance_dict
+							print neverallow_distance_dict
 							print "--------------------------"
 							if count >= 10:
 								exit()

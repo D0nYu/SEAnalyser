@@ -81,7 +81,12 @@ class tfidf_calc(object):
 				#logging.warning("tf =0 for %s"%str(kv))
 				weight_dict[kv] = 0
 			else:
-				idf = math.log(1/self.global_allow_freq_dict[kv])
+				precise = 1/len(subs)
+				if self.global_allow_freq_dict[kv] > precise:
+					idf = math.log(1/self.global_allow_freq_dict[kv])
+				else :
+					logging.debug("Not enough case for (%s)"%str(kv[0]))
+					idf = 0
 				weight_dict[kv] = tf * idf 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
 		
@@ -99,7 +104,14 @@ class tfidf_calc(object):
 				logging.warning("tf =0 for %s"%str(kv))
 				weight_dict[kv] = 0
 			else:
-				idf = math.log(1/self.global_neverallow_freq_dict[kv])
+				precise = 1/len(subs)
+				if self.global_neverallow_freq_dict[kv] > precise:
+					#enough cases for this feature	
+					idf = math.log(1/self.global_neverallow_freq_dict[kv])
+				else:
+					logging.debug("Not enough case for (%s)"%str(kv[0]))
+					idf = 0
+
 				weight_dict[kv] = tf * idf #
 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
@@ -110,9 +122,9 @@ class tfidf_calc(object):
 		#weight < 1/e will be set to 0
 		ret_vec = [0] * 17
 
-		for f in weight_dict:
-			if self.global_allow_freq_dict[f]<0.1 and self.global_neverallow_freq_dict[f]<0.1:
-				weight_dict[f] = 0
+		#for f in weight_dict:
+		#	if self.global_allow_freq_dict[f]<0.1 and self.global_neverallow_freq_dict[f]<0.1:
+		#		weight_dict[f] = 0
 
 		#attr_feature weights (ordered):
 		#"domain","mlstrustedsubject","coredomain","appdomain","untrusted_app_all",\

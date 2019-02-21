@@ -1,0 +1,137 @@
+seversion >= 28.0
+/Users/Don/Desktop/Learning_Exercise/SEAndroid/Pixel/system_etc_selinux/selinux/plat_sepolicy.cil /Users/Don/Desktop/Learning_Exercise/SEAndroid/Pixel/vendor_etc_selinux/selinux/vendor_sepolicy.cil /Users/Don/Desktop/Learning_Exercise/SEAndroid/Pixel/system_etc_selinux/selinux/mapping/28.0.cil
+In file [plat_sepolicy.cil]
+allow_rules: 6044
+In file [vendor_sepolicy.cil]
+allow_rules: 1598
+In file [28.0.cil]
+No neverallow rules in this file
+allow_rules: 0
+No typetransition in this file
+In file [plat_pub_versioned.cil]
+allow_rules: 3518
+No typetransition in this file
+indirect_neverallow: 115058
+finegrained neverallow:8931659
+Typetransitions: 470
+Init tf-idf
+Tf-idf value initialized
+1315
+--------------------------
+[Target_rule]:[1;35m ('isolated_app','app_data_file','dir',['getattr'])[0m!
+Number of related_rules(allow,neverallow)(33,68)
+[Allow Subs]:
+33
+[ALLOW_SUBS]:
+['untrusted_v2_app', 'logger_app', 'priv_app', 'bluetooth', 'system_server', 'radio', 'traceur_app', 'qcneservice', 'profman', 'hardware_info_app', 'runas', 'wfc_activation_app', 'system_app', 'shell', 'untrusted_app_27', 'untrusted_app_25', 'qtimeservice', 'google_camera_app', 'ramdump_app', 'qtelephony', 'ephemeral_app', 'ssr_detector', 'mediaprovider', 'con_monitor_app', 'dexoptanalyzer', 'secure_element', 'nfc', 'platform_app', 'su', 'uncrypt', 'shared_relro', 'untrusted_app', 'installd']
+[ALLOW_WEIGHT]:
+{('coredomain', True): 0.496070793546743, ('appdomain', True): 1.4907326476313123, ('userlevel', 'root'): 0.18253547573759632, ('bluetoothdomain', True): 0.7493298741955176, ('mlstrustedsubject', True): 0.32885611950191274, ('domain', True): 0.010542207269348847, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0, ('halserverdomain', True): 0, ('userlevel', 'shell'): 0.22201040880399162, ('netdomain', True): 0.9249706433787032, ('halclientdomain', True): 0.3384453595302691, ('untrusted_domain', True): 0.5764537531839984, ('userlevel', 'system'): 0.35979614654913417, ('userlevel', 'isolated'): 0, ('untrusted_app_all', True): 0.3779561740709839, ('userlevel', 'app'): 1.0892084410840972, ('binderservicedomain', True): 0.3725040215106312}
+[ALLOW_DISTANCE]:
+{'untrusted_v2_app': 0.86174445589558257, 'logger_app': 0.80625114918001928, 'priv_app': 0.86174445589558257, 'bluetooth': 0.86174445589558257, 'system_server': 0.14923098238112628, 'radio': 0.86174445589558257, 'traceur_app': 1.0000000000000002, 'qcneservice': 0.86174445589558257, 'profman': 0.31574648427405477, 'hardware_info_app': 0.94884358967565041, 'runas': 0.31574648427405477, 'wfc_activation_app': 0.86174445589558257, 'system_app': 0.86174445589558257, 'shell': 0.86174445589558257, 'untrusted_app_27': 0.86174445589558257, 'untrusted_app_25': 0.86174445589558257, 'qtimeservice': 0.94884358967565041, 'google_camera_app': 0.86174445589558257, 'ramdump_app': 0.94884358967565041, 'qtelephony': 1.0000000000000002, 'ephemeral_app': 0.86174445589558257, 'ssr_detector': 0.94884358967565041, 'mediaprovider': 0.86174445589558257, 'con_monitor_app': 0.94884358967565041, 'dexoptanalyzer': 0.31574648427405477, 'secure_element': 1.0000000000000002, 'nfc': 0.86174445589558257, 'platform_app': 0.86174445589558257, 'su': 0.86174445589558257, 'uncrypt': 0.31574648427405477, 'shared_relro': 1.0000000000000002, 'untrusted_app': 0.86174445589558257, 'installd': 0.31574648427405477}
+[Neverallow Subs]:
+68
+[NEVERALLOW_SUBS]:
+['traced_probes', 'hal_graphics_allocator_default', 'hal_tv_input_default', 'wcnss_filter', 'rmt', 'init-qcom-devstart-sh', 'hal_cas_default', 'per_mgr', 'hal_tv_cec_default', 'hal_vehicle_default', 'subsystem_ramdump', 'cnd', 'adsprpcd', 'hal_vr_default', 'hal_evs_default', 'cnss-daemon', 'hal_dumpstate_default', 'vendor_shell', 'htc_ramdump', 'vendor_init', 'hal_thermal_default', 'init_mid', 'init', 'cnss_diag', 'hal_bluetooth_default', 'ssr_setup', 'irqbalance', 'hal_broadcastradio_default', 'nanohub_slpi', 'init_foreground', 'hal_usb_default', 'hal_gatekeeper_default', 'hal_audiocontrol_default', 'hal_lowpan_default', 'hal_tetheroffload_default', 'hal_confirmationui_default', 'hal_authsecret_default', 'thermal-engine', 'hal_ir_default', 'vendor_modprobe', 'hal_wifi_offload_default', 'irsc_util', 'isolated_app', 'hal_configstore_default', 'per_proxy', 'hal_health_default', 'mediacodec', 'hal_sensors_default', 'init_power', 'hal_bootctl_default', 'hal_light_default', 'hal_radio_config_default', 'atfwd', 'hal_secure_element_default', 'hal_keymaster_default', 'vndservicemanager', 'nanoapp_cmd', 'traced', 'hal_wifi_hostapd_default', 'hal_radio_default', 'hal_drm_clearkey', 'ims', 'perfetto', 'imscm', 'hal_contexthub_default', 'port-bridge', 'hal_memtrack_default', 'hal_vibrator_default']
+[NEVERALLOW_WEIGHT]:
+{('coredomain', True): 0.04264351956094286, ('appdomain', True): 0.028708080445752585, ('userlevel', 'root'): 0.3486235580937061, ('bluetoothdomain', True): 0, ('mlstrustedsubject', True): 0.12323624664298113, ('domain', True): 0.019779037332119612, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0.1389981425295505, ('halserverdomain', True): 0.7131130682054027, ('userlevel', 'shell'): 0.05572285435289378, ('netdomain', True): 0.07335283390408717, ('halclientdomain', True): 0.027494413803965213, ('untrusted_domain', True): 0.04577220192478968, ('userlevel', 'system'): 0.3869125468801973, ('userlevel', 'isolated'): 0.0743035424667318, ('untrusted_app_all', True): 0, ('userlevel', 'app'): 0, ('binderservicedomain', True): 0}
+[NEVERALLOW_DISTANCE]:
+{'untrusted_v2_app': 0.86174445589558257, 'logger_app': 0.80625114918001928, 'priv_app': 0.86174445589558257, 'bluetooth': 0.86174445589558257, 'system_server': 0.14923098238112628, 'radio': 0.86174445589558257, 'traceur_app': 1.0000000000000002, 'qcneservice': 0.86174445589558257, 'profman': 0.31574648427405477, 'hardware_info_app': 0.94884358967565041, 'runas': 0.31574648427405477, 'wfc_activation_app': 0.86174445589558257, 'system_app': 0.86174445589558257, 'shell': 0.86174445589558257, 'untrusted_app_27': 0.86174445589558257, 'untrusted_app_25': 0.86174445589558257, 'qtimeservice': 0.94884358967565041, 'google_camera_app': 0.86174445589558257, 'ramdump_app': 0.94884358967565041, 'qtelephony': 1.0000000000000002, 'ephemeral_app': 0.86174445589558257, 'ssr_detector': 0.94884358967565041, 'mediaprovider': 0.86174445589558257, 'con_monitor_app': 0.94884358967565041, 'dexoptanalyzer': 0.31574648427405477, 'secure_element': 1.0000000000000002, 'nfc': 0.86174445589558257, 'platform_app': 0.86174445589558257, 'su': 0.86174445589558257, 'uncrypt': 0.31574648427405477, 'shared_relro': 1.0000000000000002, 'untrusted_app': 0.86174445589558257, 'installd': 0.31574648427405477}
+--------------------------
+--------------------------
+[Target_rule]:[1;35m ('vold','rootfs','filesystem',['remount'])[0m!
+Number of related_rules(allow,neverallow)(1,204)
+--------------------------
+[Target_rule]:[1;35m ('hal_camera_default','shell_exec','file',['read', 'getattr', 'open'])[0m!
+Number of related_rules(allow,neverallow)(51,4)
+--------------------------
+[Target_rule]:[1;35m ('update_engine','proc','file',['ioctl', 'read', 'getattr', 'lock', 'map', 'open'])[0m!
+Number of related_rules(allow,neverallow)(5,121)
+[Allow Subs]:
+5
+[ALLOW_SUBS]:
+['vendor_init', 'hal_audio_default', 'irqbalance', 'init_foreground', 'vold']
+[ALLOW_WEIGHT]:
+{('coredomain', True): 0.12126174953364828, ('appdomain', True): 0, ('userlevel', 'root'): 0.9637873118945086, ('bluetoothdomain', True): 0, ('mlstrustedsubject', True): 0.542612597178156, ('domain', True): 0.010542207269348847, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0, ('halserverdomain', True): 0.29053303330238966, ('userlevel', 'shell'): 0, ('netdomain', True): 0, ('halclientdomain', True): 0.7445797909665921, ('untrusted_domain', True): 0, ('userlevel', 'system'): 0.19788788060202378, ('userlevel', 'isolated'): 0, ('untrusted_app_all', True): 0, ('userlevel', 'app'): 0, ('binderservicedomain', True): 0}
+[ALLOW_DISTANCE]:
+{'irqbalance': 0.79135052565053765, 'hal_audio_default': 0.61136269558472223, 'vendor_init': 0.68957427808050575, 'init_foreground': 0.79135052565053765, 'vold': 0.91344294703442619}
+[Neverallow Subs]:
+121
+[NEVERALLOW_SUBS]:
+['adbd', 'netd', 'lmkd', 'sgdisk', 'radio', 'idmap', 'runas', 'incident_helper', 'wpantund', 'servicemanager', 'bufferhubd', 'statsd', 'postinstall', 'traced_probes', 'ueventd', 'asan_extract', 'system_app', 'logpersist', 'toolbox', 'preloads_copy', 'secure_element', 'dumpstate', 'nfc', 'traced', 'zygote', 'recovery_refresh', 'vdc', 'dnsmasq', 'fingerprintd', 'kernel', 'priv_app', 'fsck_untrusted', 'bluetooth', 'logd', 'mdnsd', 'otapreopt_chroot', 'clatd', 'update_verifier', 'dex2oat', 'profman', 'bootstat', 'vold_prepare_subdirs', 'vr_hwc', 'webview_zygote', 'preopt2cachename', 'dhcp', 'blank_screen', 'hal_allocator_default', 'google_camera_app', 'perfprofd', 'tzdatacheck', 'incident', 'modprobe', 'cppreopts', 'untrusted_v2_app', 'racoon', 'wificond', 'uncrypt', 'perfetto', 'mediaserver', 'untrusted_app', 'installd', 'netutils_wrapper', 'thermalserviced', 'system_server', 'ppp', 'blkid_untrusted', 'install_recovery', 'traceur_app', 'watchdogd', 'e2fs', 'init', 'atrace', 'qcneservice', 'hwservicemanager', 'shell', 'wfc_activation_app', 'slideshow', 'postinstall_dexopt', 'gatekeeperd', 'mediaprovider', 'recovery_persist', 'tombstoned', 'incidentd', 'platform_app', 'mtp', 'inputflinger', 'usbd', 'bpfloader', 'cameraserver', 'sdcardd', 'surfaceflinger', 'blkid', 'drmserver', 'keystore', 'recovery', 'mediadrmserver', 'storaged', 'move-widevine-data-sh', 'audioserver', 'mediametrics', 'crash_dump', 'healthd', 'untrusted_app_27', 'untrusted_app_25', 'wait_for_keymaster', 'otapreopt_slot', 'qtelephony', 'fsck', 'ephemeral_app', 'isolated_app', 'stats', 'dexoptanalyzer', 'virtual_touchpad', 'mediaextractor', 'charger', 'update_engine', 'su', 'shared_relro', 'bootanim', 'performanced']
+[NEVERALLOW_WEIGHT]:
+{('coredomain', True): 0.5799518660288229, ('appdomain', True): 0.35493626732930467, ('userlevel', 'root'): 0.3687918631073916, ('bluetoothdomain', True): 0.2031972189188086, ('mlstrustedsubject', True): 0.5263511757445674, ('domain', True): 0.019779037332119612, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0.07811465861164822, ('halserverdomain', True): 0.03435066491473487, ('userlevel', 'shell'): 0.12526129242964554, ('netdomain', True): 0.4534538823161752, ('halclientdomain', True): 0.4635421831412317, ('untrusted_domain', True): 0.18006254641487512, ('userlevel', 'system'): 0.3140777699192786, ('userlevel', 'isolated'): 0.04175736270857655, ('untrusted_app_all', True): 0.09635316176479293, ('userlevel', 'app'): 0.23562680014564216, ('binderservicedomain', True): 0.383220593490888}
+[NEVERALLOW_DISTANCE]:
+{'irqbalance': 0.79135052565053765, 'hal_audio_default': 0.61136269558472223, 'vendor_init': 0.68957427808050575, 'init_foreground': 0.79135052565053765, 'vold': 0.91344294703442619}
+--------------------------
+--------------------------
+[Target_rule]:[1;35m ('hal_camera_default','hal_sensors_default','fd',['use'])[0m!
+Number of related_rules(allow,neverallow)(5,0)
+--------------------------
+[Target_rule]:[1;35m ('system_app','asec_apk_file','file',['ioctl', 'read', 'write', 'create', 'getattr', 'setattr', 'lock', 'append', 'map', 'unlink', 'rename', 'open'])[0m!
+Number of related_rules(allow,neverallow)(14,78)
+[Allow Subs]:
+14
+[ALLOW_SUBS]:
+['vold', 'dex2oat', 'init', 'profman', 'untrusted_app_25', 'platform_app', 'untrusted_app_27', 'mediaextractor', 'system_server', 'mediaserver', 'untrusted_app', 'system_app', 'installd', 'drmserver']
+[ALLOW_WEIGHT]:
+{('coredomain', True): 0.6063087476682414, ('appdomain', True): 0.6507166319025569, ('userlevel', 'root'): 0.43026219281004846, ('bluetoothdomain', True): 1.103923475377325, ('mlstrustedsubject', True): 0.678265746472695, ('domain', True): 0.010542207269348847, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0, ('halserverdomain', True): 0, ('userlevel', 'shell'): 0, ('netdomain', True): 0.9180159768871339, ('halclientdomain', True): 0.53184270783328, ('untrusted_domain', True): 0.6793919233954266, ('userlevel', 'system'): 0.3533712153607568, ('userlevel', 'isolated'): 0, ('untrusted_app_all', True): 0.890896696024462, ('userlevel', 'app'): 0.7335485419545961, ('binderservicedomain', True): 0.8780451935607736}
+[ALLOW_DISTANCE]:
+{'vold': 0.25266618568693405, 'dex2oat': 0.38683874674350227, 'profman': 0.38683874674350227, 'untrusted_app_25': 1.0, 'platform_app': 1.0, 'mediaextractor': 0.27291491905270071, 'init': 0.28577956313145353, 'mediaserver': 0.67754232413931581, 'untrusted_app': 1.0, 'drmserver': 0.73266542068579432, 'untrusted_app_27': 1.0, 'system_server': 0.67754232413931581, 'system_app': 1.0, 'installd': 0.28577956313145353}
+[Neverallow Subs]:
+78
+[NEVERALLOW_SUBS]:
+['traced_probes', 'cnss-daemon', 'hal_graphics_allocator_default', 'hal_contexthub_default', 'rmt', 'init-qcom-devstart-sh', 'hal_cas_default', 'ssr_setup', 'per_mgr', 'hal_configstore_default', 'hal_vehicle_default', 'recovery', 'adsprpcd', 'init_mid', 'hal_thermal_default', 'hal_tv_input_default', 'hal_radio_default', 'hal_vr_default', 'recovery_refresh', 'hal_drm_clearkey', 'vendor_shell', 'subsystem_ramdump', 'vendor_init', 'ims', 'hal_light_default', 'cnss_diag', 'cnd', 'logd', 'wcnss_filter', 'hal_tv_cec_default', 'atfwd', 'irqbalance', 'nanohub_slpi', 'perfetto', 'mediaextractor', 'hal_evs_default', 'untrusted_app_27', 'hal_gatekeeper_default', 'untrusted_app_25', 'htc_ramdump', 'hal_lowpan_default', 'hal_tetheroffload_default', 'hal_confirmationui_default', 'hal_authsecret_default', 'thermal-engine', 'hal_bluetooth_default', 'hal_ir_default', 'vendor_modprobe', 'hal_usb_default', 'irsc_util', 'ephemeral_app', 'isolated_app', 'recovery_persist', 'hal_secure_element_default', 'hal_health_default', 'mediacodec', 'hal_sensors_default', 'init_power', 'hal_bootctl_default', 'per_proxy', 'hal_radio_config_default', 'logpersist', 'hal_keymaster_default', 'vndservicemanager', 'nanoapp_cmd', 'traced', 'hal_wifi_hostapd_default', 'hal_broadcastradio_default', 'hal_dumpstate_default', 'hal_wifi_offload_default', 'init_foreground', 'untrusted_app', 'imscm', 'port-bridge', 'untrusted_v2_app', 'hal_memtrack_default', 'hal_audiocontrol_default', 'hal_vibrator_default']
+[NEVERALLOW_WEIGHT]:
+{('coredomain', True): 0.11152920500554286, ('appdomain', True): 0.15016534387009045, ('userlevel', 'root'): 0.28605009894868194, ('bluetoothdomain', True): 0.15760809928958872, ('mlstrustedsubject', True): 0.12892407341111872, ('domain', True): 0.019779037332119612, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0.12117786784627478, ('halserverdomain', True): 0.6216883158713767, ('userlevel', 'shell'): 0.04857889866662535, ('netdomain', True): 0.17052966514454454, ('halclientdomain', True): 0.04793897791460601, ('untrusted_domain', True): 0.23942382545274604, ('userlevel', 'system'): 0.37478708244805437, ('userlevel', 'isolated'): 0.06477744727868927, ('untrusted_app_all', True): 0.14947093042999932, ('userlevel', 'app'): 0.16614710266679894, ('binderservicedomain', True): 0.03128859096652999}
+[NEVERALLOW_DISTANCE]:
+{'vold': 0.25266618568693405, 'dex2oat': 0.38683874674350227, 'profman': 0.38683874674350227, 'untrusted_app_25': 1.0, 'platform_app': 1.0, 'mediaextractor': 0.27291491905270071, 'init': 0.28577956313145353, 'mediaserver': 0.67754232413931581, 'untrusted_app': 1.0, 'drmserver': 0.73266542068579432, 'untrusted_app_27': 1.0, 'system_server': 0.67754232413931581, 'system_app': 1.0, 'installd': 0.28577956313145353}
+--------------------------
+--------------------------
+[Target_rule]:[1;35m ('system_server','proc_interrupts','file',['getattr'])[0m!
+Number of related_rules(allow,neverallow)(5,0)
+--------------------------
+[Target_rule]:[1;35m ('untrusted_app_25','debugfs_tracing','file',['open'])[0m!
+Number of related_rules(allow,neverallow)(8,115)
+[Allow Subs]:
+8
+[ALLOW_SUBS]:
+['traced_probes', 'shell', 'perfprofd', 'vendor_init', 'atrace', 'dumpstate', 'init', 'traceur_app']
+[ALLOW_WEIGHT]:
+{('coredomain', True): 0.5305201542097112, ('appdomain', True): 0.45550164233178986, ('userlevel', 'root'): 0.7529588374175848, ('bluetoothdomain', True): 0, ('mlstrustedsubject', True): 1.0173986197090426, ('domain', True): 0.010542207269348847, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0.6085044546548156, ('halserverdomain', True): 0, ('userlevel', 'shell'): 0.4578964681582327, ('netdomain', True): 0.4016319898881211, ('halclientdomain', True): 0.23268118467706, ('untrusted_domain', True): 0.3963119553139989, ('userlevel', 'system'): 0, ('userlevel', 'isolated'): 0, ('untrusted_app_all', True): 0, ('userlevel', 'app'): 0.3209274871051358, ('binderservicedomain', True): 0}
+[ALLOW_DISTANCE]:
+{'shell': 0.62114560753466441, 'perfprofd': 0.25432188673603051, 'traced_probes': 0.30419176099478218, 'atrace': 0.37893646918126062, 'vendor_init': 0.0, 'dumpstate': 0.38397658099004073, 'init': 0.25432188673603051, 'traceur_app': 0.867136479596052}
+[Neverallow Subs]:
+115
+[NEVERALLOW_SUBS]:
+['adbd', 'netd', 'lmkd', 'sgdisk', 'radio', 'idmap', 'runas', 'incident_helper', 'wpantund', 'servicemanager', 'preloads_copy', 'statsd', 'postinstall', 'ueventd', 'asan_extract', 'dhcp', 'logpersist', 'toolbox', 'bufferhubd', 'secure_element', 'nfc', 'traced', 'zygote', 'recovery_refresh', 'vdc', 'dnsmasq', 'fingerprintd', 'kernel', 'priv_app', 'fsck_untrusted', 'bluetooth', 'logd', 'mdnsd', 'otapreopt_chroot', 'clatd', 'update_verifier', 'dex2oat', 'stats', 'bootstat', 'vold_prepare_subdirs', 'vr_hwc', 'webview_zygote', 'profman', 'preopt2cachename', 'system_app', 'blank_screen', 'hal_allocator_default', 'google_camera_app', 'tzdatacheck', 'incident', 'modprobe', 'fsck', 'untrusted_v2_app', 'racoon', 'wificond', 'uncrypt', 'perfetto', 'mediaserver', 'untrusted_app', 'installd', 'vold', 'mediametrics', 'netutils_wrapper', 'thermalserviced', 'system_server', 'ppp', 'watchdogd', 'e2fs', 'blkid_untrusted', 'hwservicemanager', 'blkid', 'wfc_activation_app', 'slideshow', 'postinstall_dexopt', 'gatekeeperd', 'mediaprovider', 'recovery_persist', 'tombstoned', 'incidentd', 'platform_app', 'mtp', 'inputflinger', 'usbd', 'bpfloader', 'cameraserver', 'sdcardd', 'surfaceflinger', 'qcneservice', 'keystore', 'recovery', 'mediadrmserver', 'storaged', 'move-widevine-data-sh', 'audioserver', 'drmserver', 'crash_dump', 'healthd', 'untrusted_app_27', 'untrusted_app_25', 'wait_for_keymaster', 'otapreopt_slot', 'qtelephony', 'cppreopts', 'ephemeral_app', 'isolated_app', 'install_recovery', 'dexoptanalyzer', 'virtual_touchpad', 'mediaextractor', 'charger', 'update_engine', 'su', 'shared_relro', 'bootanim', 'performanced']
+[NEVERALLOW_WEIGHT]:
+{('coredomain', True): 0.5799518660288229, ('appdomain', True): 0.3395042557062914, ('userlevel', 'root'): 0.3516550672945209, ('bluetoothdomain', True): 0.21379881294935513, ('mlstrustedsubject', True): 0.4955168734583868, ('domain', True): 0.019779037332119612, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0.04109510300873667, ('halserverdomain', True): 0.0361428735189819, ('userlevel', 'shell'): 0.09884749815643766, ('netdomain', True): 0.44819644599946595, ('halclientdomain', True): 0.4877269926964264, ('untrusted_domain', True): 0.16239181204621034, ('userlevel', 'system'): 0.33046443617593657, ('userlevel', 'isolated'): 0.043936007719458804, ('untrusted_app_all', True): 0.10138028324817343, ('userlevel', 'app'): 0.22538215666104902, ('binderservicedomain', True): 0.4032147114121517}
+[NEVERALLOW_DISTANCE]:
+{'shell': 0.62114560753466441, 'perfprofd': 0.25432188673603051, 'traced_probes': 0.30419176099478218, 'atrace': 0.37893646918126062, 'vendor_init': 0.0, 'dumpstate': 0.38397658099004073, 'init': 0.25432188673603051, 'traceur_app': 0.867136479596052}
+--------------------------
+--------------------------
+[Target_rule]:[1;35m ('vr_hwc','mediaserver','fd',['use'])[0m!
+Number of related_rules(allow,neverallow)(46,0)
+--------------------------
+[Target_rule]:[1;35m ('hal_graphics_composer_default','mediaserver','fd',['use'])[0m!
+Number of related_rules(allow,neverallow)(46,0)
+--------------------------
+[Target_rule]:[1;35m ('system_app','rild','binder',['call'])[0m!
+Number of related_rules(allow,neverallow)(7,10)
+[Allow Subs]:
+7
+[ALLOW_SUBS]:
+['hwservicemanager', 'platform_app', 'per_mgr', 'su', 'bluetooth', 'radio', 'audioserver']
+[ALLOW_WEIGHT]:
+{('coredomain', True): 0.519693212287064, ('appdomain', True): 1.041146611044091, ('userlevel', 'root'): 0.17210487712401937, ('bluetoothdomain', True): 0.8831387803018599, ('mlstrustedsubject', True): 0.5813706398337385, ('domain', True): 0.010542207269348847, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0, ('halserverdomain', True): 0, ('userlevel', 'shell'): 0, ('netdomain', True): 0.9180159768871339, ('halclientdomain', True): 1.06368541566656, ('untrusted_domain', True): 0, ('userlevel', 'system'): 0.7067424307215135, ('userlevel', 'isolated'): 0, ('untrusted_app_all', True): 0, ('userlevel', 'app'): 0.36677427097729803, ('binderservicedomain', True): 0.7024361548486189}
+[ALLOW_DISTANCE]:
+{'hwservicemanager': 0.44532603080154193, 'platform_app': 0.90263620864716199, 'per_mgr': 0.43040431554420677, 'su': 0.69871434079181927, 'bluetooth': 0.83929334219214635, 'radio': 0.80452455418690116, 'audioserver': 0.33991556928244038}
+[Neverallow Subs]:
+10
+[NEVERALLOW_SUBS]:
+['vold', 'untrusted_app_27', 'untrusted_app_25', 'perfprofd', 'ephemeral_app', 'isolated_app', 'mediaprovider', 'untrusted_app', 'untrusted_v2_app', 'installd']
+[NEVERALLOW_WEIGHT]:
+{('coredomain', True): 0.5799518660288229, ('appdomain', True): 1.366504629217823, ('userlevel', 'root'): 0.4183482697124473, ('bluetoothdomain', True): 1.2293431744587922, ('mlstrustedsubject', True): 0.502803886303363, ('domain', True): 0.019779037332119612, ('userlevel', 'vendor'): 0, ('userlevel', 'app_shared'): 0, ('halserverdomain', True): 0, ('userlevel', 'shell'): 0, ('netdomain', True): 0.9975985410955855, ('halclientdomain', True): 0.18696201386696346, ('untrusted_domain', True): 1.867505838531419, ('userlevel', 'system'): 0, ('userlevel', 'isolated'): 0.5052640887737763, ('untrusted_app_all', True): 1.1658732573539945, ('userlevel', 'app'): 1.5551368809612383, ('binderservicedomain', True): 0}
+[NEVERALLOW_DISTANCE]:
+{'hwservicemanager': 0.44532603080154193, 'platform_app': 0.90263620864716199, 'per_mgr': 0.43040431554420677, 'su': 0.69871434079181927, 'bluetooth': 0.83929334219214635, 'radio': 0.80452455418690116, 'audioserver': 0.33991556928244038}
+--------------------------
