@@ -62,6 +62,8 @@ class tfidf_calc(object):
 	def freq_calc_subs(self,kv,sub_list):
 		#calc sum(feature = value) /
 		total_sum = len(sub_list)
+		if total_sum == 0:
+			return 0 
 		count_i = 0
 		for sub in sub_list:
 			if self.feature_dict[sub][kv[0]] == kv[1]:
@@ -81,7 +83,7 @@ class tfidf_calc(object):
 				#logging.warning("tf =0 for %s"%str(kv))
 				weight_dict[kv] = 0
 			else:
-				precise = 1/len(subs)
+				precise = 0
 				if self.global_allow_freq_dict[kv] > precise:
 					idf = math.log(1/self.global_allow_freq_dict[kv])
 				else :
@@ -89,7 +91,7 @@ class tfidf_calc(object):
 					idf = 0
 				weight_dict[kv] = tf * idf 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
-		
+		weight_dict[("appdomain",True)] = 10
 		return weight_dict
 			
 	def calc_neverallow_weight(self,subs):#subs is a list of all related subjects
@@ -104,7 +106,7 @@ class tfidf_calc(object):
 				logging.warning("tf =0 for %s"%str(kv))
 				weight_dict[kv] = 0
 			else:
-				precise = 1/len(subs)
+				precise = 0 
 				if self.global_neverallow_freq_dict[kv] > precise:
 					#enough cases for this feature	
 					idf = math.log(1/self.global_neverallow_freq_dict[kv])
@@ -115,7 +117,9 @@ class tfidf_calc(object):
 				weight_dict[kv] = tf * idf #
 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
-			
+		
+		weight_dict[("appdomain",True)] = 10
+
 		return weight_dict
 			
 	def weight_dict_vectorize(self,weight_dict):
@@ -151,10 +155,6 @@ class tfidf_calc(object):
 		ret_vec[15] = weight_dict[("userlevel","app")]
 		ret_vec[16] = weight_dict[("userlevel","isolated")]
 
-
-		for weight in ret_vec:
-			if weight < 1/math.e:
-				ret_vec[ret_vec.index(weight)] = 0 
 		return ret_vec
 
 
@@ -188,4 +188,3 @@ if __name__ == '__main__':
 	test_feature_list = [sub_feature(refdev_ins,sub).feature_dict for sub in test_subs ]
 
 	#print tfidf_ins.global_neverallow_freq_dict[('halclientdomain', True)]
-

@@ -16,7 +16,7 @@ class dev(object):
 	"""docstring for dev"""
 	def __init__(self, dev_name,**kw):
 		super(dev, self).__init__()
-		
+		print "-------Init dev:%s--------"%dev_name
 		self.dev_name = dev_name
 		self.finegrained_neal_list = [] #expanded neverallow 
 		self.attri_dict = dict()
@@ -315,8 +315,8 @@ class sub_feature(object):
 
 		#self.attribute_vec  = self.attrfeatures2vec(self.attribute_features)
 
-		#untrusted features
-		if "untrusted_app" in self.typename  or "isolated_app" == self.typename or "shell" == self.typename \
+		#untrusted features,which may run 3rd party code
+		if "untrusted_app" in self.typename  or "isolated_app" == self.typename \
 		or "ephemeral_app" == self.typename or "untrusted_v2_app" == self.typename:
 			self.untrusted_domain = True  #untrusted_app\isolated_app\shell
 		else:
@@ -410,6 +410,16 @@ class sub_feature(object):
 		self.feature_vector = self.feature_vectorize()
 
 		#print self.typetransition_path,exec_file
+
+	def tostr(self):
+		ret_str = ""
+		for i in self.feature_dict:
+			if self.feature_dict[i] == True:
+				ret_str += i
+				ret_str += " "
+		return ret_str
+
+
 	def feature_vectorize(self):
 		#print "Vector:"
 		attr_vec = [0]*11
@@ -526,7 +536,7 @@ def get_attr(dev_instance,typename):
 
 if __name__ == '__main__':
 	#test
-	devins = dev("Pixel",expanded_neal=False)
+
 	for testcase in ["location","hal_graphics_allocator_default","hal_tv_input_default","untrusted_app_25","system_server","logger_app","hardware_info_app_tmpfs","pdx_display_client_server_type","profman","surfaceflinger"]:
 		print "-------------"
 		print testcase

@@ -27,8 +27,8 @@ def get_target_finegrained_neals(devins,**kw):
 			condition3 = r.claz == kw["claz"]
 		else:
 			condition3 = True
-		if "perms" in kw:
-			condition4 = (set(kw["perms"])&set(r.perms))!=set([])
+		if "perm" in kw:
+			condition4 = kw["perm"] in r.perms
 		else:
 			condition4 = True
 
@@ -55,8 +55,8 @@ def get_target_finegrained_rules(devins,**kw):
 			condition3 = r.claz == kw["claz"]
 		else:
 			condition3 = True
-		if "perms" in kw:
-			condition4 = (set(kw["perms"])&set(r.perms))!=set([])
+		if "perm" in kw:
+			condition4 = kw["perm"] in r.perms
 		else:
 			condition4 = True
 
