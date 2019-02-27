@@ -178,12 +178,12 @@ def get_related_rules(fr,ref_ins):
 	#print [type(f) for f in fr]
 	allow_sub = get_target_finegrained_rules(ref_ins,_type=fr_type,claz=fr_claz,perm=fr_perm)
 	
-	allow_obj = get_target_finegrained_rules(ref_ins,domain=fr_domain,claz=fr_claz,perm=fr_perm)
-
+	#allow_obj = get_target_finegrained_rules(ref_ins,domain=fr_domain,claz=fr_claz,perm=fr_perm)
+	allow_obj = []
 	
 	neverallow_sub = get_target_finegrained_neals(ref_ins,_type=fr_type,claz=fr_claz,perm=fr_perm)
-	neverallow_obj = get_target_finegrained_neals(ref_ins,domain=fr_domain,claz=fr_claz,perm=fr_perm)
-
+	#neverallow_obj = get_target_finegrained_neals(ref_ins,domain=fr_domain,claz=fr_claz,perm=fr_perm)
+	neverallow_obj = []
 	return (list(set(allow_sub)),list(set(allow_obj)),list(set(neverallow_sub)),list(set(neverallow_obj)))
 
 def get_random_subdict(inputdict,num):
@@ -214,6 +214,15 @@ def simi_judge(ref_ins,src_sub,tar_sub):
 	else:
 		return sysproc_simi_judge(src_feature,tar_feature)
 
+def get_common_obj(ref_dev,sub1,sub2):
+	fr_list1 = [fr for fr in get_target_finegrained_rules(ref_dev,domain=sub1)]
+	fr_list2 = [fr for fr in get_target_finegrained_rules(ref_dev,domain=sub2)]
+	for fr1 in fr_list1:
+		for fr2 in fr_list2:
+			if (fr1._type == fr2._type) and (fr1.claz==fr2.claz) and ("getattr" not in fr1.perms):
+				print fr1
+				print fr2
+
 
 
 
@@ -221,8 +230,8 @@ def check_raw_policy():
 	
 	#ignore this permissions
 	unimportant_perm_list = ["getattr","lock","map","rename","setattr","search","link","unlink"]
-	#ref_ins = dev(ref_dev,expanded_neal = True)
-	ref_ins = dev(ref_dev,expanded_neal = False) #use False for test
+	ref_ins = dev(ref_dev,expanded_neal = False,fr_dict=True)
+	#ref_ins = dev(ref_dev,expanded_neal = False) #use False for test
 	tfidf_ins = tfidf_calc(ref_ins)
 	for d in oem_dev_list:
 		#oem_ins = dev(d, expanded_neal= False)
@@ -235,7 +244,7 @@ def check_raw_policy():
 				#print line
 				raw_rule_dict = eval(line)
 				print len(raw_rule_dict)
-				test_raw_rule_dict = get_random_subdict(raw_rule_dict,10)
+				test_raw_rule_dict = get_random_subdict(raw_rule_dict,20)
 				
 				count = 0
 				for src_rule in test_raw_rule_dict:
@@ -253,41 +262,57 @@ def check_raw_policy():
 						src_feature = sub_feature(ref_ins,src_sub)
 						#print repr(src_feature)
 
+						#when we dont have fr_dict:
 						related_rules = get_related_rules(fr,ref_ins)#a tuple of list()
-						subs = get_subs(related_rules)
-						print "Number of related_rules(allow,neverallow)(%d,%d)"%(len(subs[0]),len(subs[1]))
-						if len(subs[0])>= 3 and len(subs[1])>= 0:
-							print "[Allow Subs]:\n",len(subs[0])
+						subs_old = get_subs(related_rules)
+						print subs_old
+						#now we can directly get it from dict:
+						allowsubs = ref_ins.finegrained_allow_dict.get(repr((fr[1],fr[2],fr[3])))  #allow subs
+						neverallowsubs = ref_ins.finegrained_neal_dict.get(repr((fr[1],fr[2],fr[3]))) 
+						if allowsubs == None:
+							allowsubs = []
+						else:
+							allowsubs = list(set(allowsubs))
+						if neverallowsubs == None:
+							neverallowsubs = []
+						else:
+							neverallowsubs = list(set(neverallowsubs))
+						print allowsubs,neverallowsubs
+						exit()
+
+						print "Number of related_rules(allow,neverallow)(%d,%d)"%(len(allowsubs),len(neverallowsubs))
+						if len(allowsubs)>= 1 and len(neverallowsubs)>= 0:
+							print "[Allow Subs]:\n",len(allowsubs)
 							#calc allow weights among subs
 							#Get a weight list for each feature
 							allow_distance_dict = dict()
 							neverallow_distance_dict = dict()
-							allow_weight = tfidf_ins.calc_allow_weight(subs[0]) 
+							allow_weight = tfidf_ins.calc_allow_weight(allowsubs) 
 							print "[ALLOW_SUBS]:"
-							print subs[0]
+							print allowsubs
 							print "[ALLOW_WEIGHT]:"
 							print allow_weight
 
-							for allowsub in subs[0] :#calc distance between src_sub and related_allow subs
+							for allowsub in allowsubs :#calc distance between src_sub and related_allow subs
 								feature = sub_feature(ref_ins,allowsub)
 								allow_distance_dict[allowsub] = tfidf_ins.calc_distance(src_feature,feature,allow_weight)
 							print "[ALLOW_DISTANCE]:"
-							print allow_distance_dict
+							print sorted(allow_distance_dict.items(),key=lambda item:item[1])
 
-							print "[Neverallow Subs]:\n",len(subs[1])
+							print "[Neverallow Subs]:\n",len(neverallowsubs)
 
-							neverallow_weight = tfidf_ins.calc_neverallow_weight(subs[1])
+							neverallow_weight = tfidf_ins.calc_neverallow_weight(neverallowsubs)
 							print "[NEVERALLOW_SUBS]:"
-							print subs[1]
+							print neverallowsubs
 							print "[NEVERALLOW_WEIGHT]:"
 							print neverallow_weight
 
-							for neverallowsub in subs[1] :
+							for neverallowsub in neverallowsubs :
 								feature = sub_feature(ref_ins,neverallowsub)
 								neverallow_distance_dict[neverallowsub] = tfidf_ins.calc_distance(src_feature,feature,neverallow_weight)
 							print "[NEVERALLOW_DISTANCE]:"
 							
-							print neverallow_distance_dict
+							print sorted(neverallow_distance_dict.items(),key=lambda item:item[1])
 							print "--------------------------"
 		exit()
 

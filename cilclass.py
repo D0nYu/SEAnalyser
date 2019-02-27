@@ -19,8 +19,12 @@ class dev(object):
 		print "-------Init dev:%s--------"%dev_name
 		self.dev_name = dev_name
 		self.finegrained_neal_list = [] #expanded neverallow 
+		self.finegrained_neal_dict = dict()
 		self.attri_dict = dict()
 		self.finegrained_allow_list = [] #expanded allow
+		self.finegrained_allow_dict = dict()
+		self.related_fr_hash_dict = [] #used to get related subs
+
 		self.domset = set()
 		self.typeset = set()
 		#set related cil file path first
@@ -106,8 +110,6 @@ class dev(object):
 
 
 
-
-
 		self.finegrained_allow_list = self.expandrules(merged_allow,merged_attr)
 		for fr in self.finegrained_allow_list:
 			self.domset.add(fr.domain)
@@ -127,7 +129,11 @@ class dev(object):
 			print "finegrained neverallow:%d"%(len(self.finegrained_neal_list))
 
 			#infer from base_typeattr declaration
-			
+		
+		if "fr_dict" in kw and kw["fr_dict"] == True:
+			print "Fr Hashing"
+			self.finegrained_allow_dict = self.get_fr_dict(self.finegrained_allow_list)
+			self.finegrained_neal_dict = self.get_fr_dict(self.finegrained_neal_list)
 
 
 		'''
@@ -153,6 +159,16 @@ class dev(object):
 				self.typetrans_dict[typetrans[0]] = [(typetrans[1],typetrans[3])]
 			else:
 				self.typetrans_dict[typetrans[0]].append((typetrans[1],typetrans[3]))
+
+	def get_fr_dict(self,fr_list):
+		ret_dict = dict()
+		for r in fr_list:
+			for perm in r.perms:
+				if ret_dict.has_key(repr((r._type,r.claz,perm))):
+					ret_dict[repr((r._type,r.claz,perm))].append(r.domain)
+				else:
+					ret_dict[repr((r._type,r.claz,perm))] = [r.domain]
+		return ret_dict
 
 	def expand_typetrans(self,typetrans_list,attr_dict):
 		#BUGS here, not exclude _28_0
@@ -536,7 +552,8 @@ def get_attr(dev_instance,typename):
 
 if __name__ == '__main__':
 	#test
-
+	dev_ins = dev("Pixel",fr_dict=True)
+	exit()
 	for testcase in ["location","hal_graphics_allocator_default","hal_tv_input_default","untrusted_app_25","system_server","logger_app","hardware_info_app_tmpfs","pdx_display_client_server_type","profman","surfaceflinger"]:
 		print "-------------"
 		print testcase
