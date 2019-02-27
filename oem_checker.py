@@ -278,7 +278,7 @@ def check_raw_policy():
 						else:
 							neverallowsubs = list(set(neverallowsubs))
 						print allowsubs,neverallowsubs
-						exit()
+				
 
 						print "Number of related_rules(allow,neverallow)(%d,%d)"%(len(allowsubs),len(neverallowsubs))
 						if len(allowsubs)>= 1 and len(neverallowsubs)>= 0:
