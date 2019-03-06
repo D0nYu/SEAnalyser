@@ -1,8 +1,10 @@
-import cilparser
+from __future__ import division
+
 import os
 import runtime_collector
 from global_configs import *
-
+from rules_statistic import get_target_finegrained_rules
+import cilparser
 
 userlevel_dict = {"cameraserver":1047,"mdnsr":1020,"_isolated":90000,\
 				"bluetooth":1002,"logd":1036,"radio":1001,"mediaex":1040,"keystore":1017,\
@@ -19,14 +21,19 @@ class dev(object):
 		print "-------Init dev:%s--------"%dev_name
 		self.dev_name = dev_name
 		self.finegrained_neal_list = [] #expanded neverallow 
-		self.finegrained_neal_dict = dict()
 		self.attri_dict = dict()
 		self.finegrained_allow_list = [] #expanded allow
-		self.finegrained_allow_dict = dict()
 		self.related_fr_hash_dict = [] #used to get related subs
 
 		self.domset = set()
 		self.typeset = set()
+
+		#used to get related domains and types
+		self.fr_domain_allow_dict = dict()
+		self.fr_domain_neverallow_dict = dict()
+		self.fr_type_allow_dict = dict()
+		self.fr_type_neverallow_dict = dict()
+
 		#set related cil file path first
 		sys_cil_filepath = os.path.join(work_path,dev_name,sys_cil_file)
 		#set vendor_sepolicy.cil/nonplat_sepolicy.cil
@@ -115,6 +122,7 @@ class dev(object):
 			self.domset.add(fr.domain)
 			self.typeset.add(fr._type)
 
+
 		if "expanded_neal" in kw and kw['expanded_neal'] ==True:
 			#directly get from neverallow rules
 			merged_neal_list =[]
@@ -130,11 +138,17 @@ class dev(object):
 
 			#infer from base_typeattr declaration
 		
-		if "fr_dict" in kw and kw["fr_dict"] == True:
-			print "Fr Hashing"
-			self.finegrained_allow_dict = self.get_fr_dict(self.finegrained_allow_list)
-			self.finegrained_neal_dict = self.get_fr_dict(self.finegrained_neal_list)
+		if "fr_domain_dict" in kw and kw["fr_domain_dict"] == True:
+			print "Fr domain Hashing"
+			self.fr_tuple2domain_allow_dict,self.fr_domain2tuple_allow_dict = self.get_fr_domain_dict(self.finegrained_allow_list)
+			self.fr_tuple2domain_neverallow_dict,self.fr_domain2tuple_neverallow_dict = self.get_fr_domain_dict(self.finegrained_neal_list)
 
+		if "fr_type_dict" in kw and kw["fr_type_dict"] == True:
+			print "Fr type Hashing"
+			self.fr_tuple2type_allow_dict,self.fr_type2tuple_allow_dict= self.get_fr_type_dict(self.finegrained_allow_list)
+			self.fr_tuple2type_neverallow_dict,self.fr_type2tuple_neverallow_dict = self.get_fr_type_dict(self.finegrained_neal_list)
+
+		
 
 		'''
 		for i in self.finegrained_allow_list:
@@ -160,15 +174,37 @@ class dev(object):
 			else:
 				self.typetrans_dict[typetrans[0]].append((typetrans[1],typetrans[3]))
 
-	def get_fr_dict(self,fr_list):
-		ret_dict = dict()
+	def get_fr_domain_dict(self,fr_list):
+		ret_dict1 = dict()
+		ret_dict2 = dict()
 		for r in fr_list:
 			for perm in r.perms:
-				if ret_dict.has_key(repr((r._type,r.claz,perm))):
-					ret_dict[repr((r._type,r.claz,perm))].append(r.domain)
+				if ret_dict1.has_key((r._type,r.claz,perm)):
+					ret_dict1[(r._type,r.claz,perm)].append(r.domain)
 				else:
-					ret_dict[repr((r._type,r.claz,perm))] = [r.domain]
-		return ret_dict
+					ret_dict1[(r._type,r.claz,perm)] = [r.domain]
+				if ret_dict2.has_key(r.domain):
+					ret_dict2[r.domain].append((r._type,r.claz,perm))
+				else:
+					ret_dict2[r.domain] = [(r._type,r.claz,perm)]				
+		return ret_dict1,ret_dict2
+
+	def get_fr_type_dict(self,fr_list):
+		ret_dict1 = dict()
+		ret_dict2 = dict()
+		for r in fr_list:
+			for perm in r.perms:
+				if ret_dict1.has_key((r.domain,r.claz,perm)):
+					ret_dict1[(r.domain,r.claz,perm)].append(r._type)
+				else:
+					ret_dict1[(r.domain,r.claz,perm)] = [r._type]
+				if ret_dict2.has_key(r._type):
+					ret_dict2[r._type].append((r.domain,r.claz,perm))
+				else:
+					ret_dict2[r._type] = [(r.domain,r.claz,perm)]	
+
+
+		return ret_dict1,ret_dict2
 
 	def expand_typetrans(self,typetrans_list,attr_dict):
 		#BUGS here, not exclude _28_0
@@ -505,6 +541,43 @@ class obj_feature(object):
 	def filecontext_lookup(self,devins,arg):
 		pass
 
+class simi_matrix(object):
+	"""docstring for simi_matrix"""
+	def __init__(self, devins,domset):
+		super(simi_matrix, self).__init__()
+		self.devins = devins
+		self.domset = domset
+
+		
+	def get_domain_sim_matrix(self):
+		simi_matrix = dict()
+		for dom1 in self.domset:
+			for dom2 in self.domset:
+				simi_matrix[(dom1,dom2)] = self.calc_dom_simi(dom1,dom2)
+				simi_matrix[(dom2,dom1)] = simi_matrix[(dom1,dom2)]
+		return simi_matrix
+
+	def calc_dom_simi(self,domA,domB):
+		#time1 = time.clock()
+		fr_list1 = get_target_finegrained_rules(self.devins,domain=domA)
+		fr_list2 = get_target_finegrained_rules(self.devins,domain=domB)
+		behavior1 = [ (fr._type,fr.claz) for fr in fr_list1 ]
+		behavior2 =  [ (fr._type,fr.claz) for fr in fr_list2 ]
+		A = set(behavior1)&set(behavior2)
+		B = set(behavior1)|set(behavior2)
+		#print "%d/%d = %f"%(len(A),len(B),len(A)/len(B))
+		#print time.clock()-time1
+		return (len(A),len(B),len(A)/len(B))
+
+	def get_type_sim_matrix(self):
+		pass
+
+	def findmost_N_simi(self,N):
+		pass
+	
+	def calc_sim(dom1,dom2,claz,perm):
+		pass
+
 #----class def ends------#
 
 def typetransition_file_lookup(typetrans_dict,typename):
@@ -552,7 +625,18 @@ def get_attr(dev_instance,typename):
 
 if __name__ == '__main__':
 	#test
-	dev_ins = dev("Pixel",fr_dict=True)
+	devins = dev("Pixel",expanded_neal = False,fr_domain_dict=True,fr_type_dict=True)	
+	#testdomset = ["system_server","dumpstate","irqbalance","incidentd","perfprofd","shell","thermal-engine","untrusted_app"]
+	#testdomset = ["hal_drm_widevine","move-widevine-data-sh","mediaserver","audioserver","untrusted_app","init"]
+	testcase = ['cgroup',  'method_trace_data_file',  'app_data_file',  'wallpaper_file',  'ringtone_file',  'shell_data_file',  'user_profile_data_file',  'backup_data_file',  'cache_backup_file',  'radio_data_file',  'exfat',  'fuse',  'sdcardfs',  'vfat',  'media_rw_data_file',  'app_fuse_file',  'untrusted_app',  'coredump_file',  'cgroup',  'debugfs_trace_marker',  'untrusted_app_tmpfs',  'system_app_data_file',  'media_rw_data_file',  'traced_tmpfs',  'cgroup',  'method_trace_data_file',  'app_data_file',  'wallpaper_file',  'ringtone_file',  'shell_data_file',  'user_profile_data_file',  'backup_data_file',  'cache_backup_file',  'radio_data_file',  'exfat',  'fuse',  'sdcardfs',  'vfat',  'media_rw_data_file',  'app_fuse_file',  'untrusted_app',  'coredump_file',  'cgroup',  'debugfs_trace_marker']
+	for obj in testcase:
+		print calc_type_simi(devins,"debugfs_tracing",testcase)
+	exit()
+	simi_class = simi_matrix(devins,testdomset)
+	domsim_matrix =  simi_class.get_domain_sim_matrix()
+	print domsim_matrix
+	print "~~~~~~"
+	print sorted(domsim_matrix.items(),key=lambda item:item[1][2])
 	exit()
 	for testcase in ["location","hal_graphics_allocator_default","hal_tv_input_default","untrusted_app_25","system_server","logger_app","hardware_info_app_tmpfs","pdx_display_client_server_type","profman","surfaceflinger"]:
 		print "-------------"

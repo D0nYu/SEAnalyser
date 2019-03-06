@@ -91,7 +91,7 @@ class tfidf_calc(object):
 					idf = 0
 				weight_dict[kv] = tf * idf 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
-		weight_dict[("appdomain",True)] = 10
+		weight_dict[("appdomain",True)] = 0
 		return weight_dict
 			
 	def calc_neverallow_weight(self,subs):#subs is a list of all related subjects
@@ -118,7 +118,7 @@ class tfidf_calc(object):
 
 			logging.debug("Get weight[%s]:%.3f"%(str(kv),weight_dict[kv]))
 		
-		weight_dict[("appdomain",True)] = 10
+		weight_dict[("appdomain",True)] = 0
 
 		return weight_dict
 			

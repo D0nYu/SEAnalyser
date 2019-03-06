@@ -4,6 +4,8 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from cilclass import *
 
 dev_ins = dev("Pixel")
+
+
 testcase1 = ['domain coredomain ']
 
 
